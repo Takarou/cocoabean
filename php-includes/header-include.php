@@ -13,11 +13,11 @@
 		
 	<nav>
 		<ul>
-			<li><a href="cheesecake.php">Cheesecake</a></li>
-			<li><a href="truffles.php">Truffles</a></li>
-			<li><a href="fruit.php">Fruit</a></li>
-			<li><a href="cupcakes.php">Cupcakes</a></li>
-			<li ><a href="contact.php">Contact Us</a></li>
+			<li><a href="products.php?category=cheesecake">Cheesecake</a></li>
+			<li><a href="products.php?category=truffles">Truffles</a></li>
+			<li><a href="products.php?category=fruit">Fruit</a></li>
+			<li><a href="products.php?category=cupcakes">Cupcakes</a></li>
+			<li><a href="contact.php">Contact Us</a></li>
 		</ul>	
 	</nav>				
 </header>
