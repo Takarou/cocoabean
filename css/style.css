@@ -130,7 +130,7 @@ nav ul li
 	text-decoration: none;
 }
 
-.container h2	{
+.container h2, .container2 h2	{
 	font-family: "Calibri","Helvetica", sans-serif;
 	font-size: 3em;
 	background: rgba(116, 69, 8, 0.5);
@@ -324,3 +324,19 @@ footer sup	{
 	font-size: .6em;
 }
 
+.keys {
+	float:left;
+	width:40%;
+}
+
+.shop {
+	float:right;
+}
+
+.container2	{
+	width: 80%;
+	margin: .5em auto;
+
+	padding: 0 0 1em 0;
+	height: 100%;
+}
