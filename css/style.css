@@ -17,11 +17,13 @@ header	{
 	
 }
 
-h1	{
+h1#logo	
+{
 	text-indent: -9001px;
 	overflow: hidden;
 	width: 400px;
 	height: 146px;
+	margin: 4px 0 -4px 0;
 	background: url("../img/logo.png") top left no-repeat;
 	float: left;
 }
@@ -88,6 +90,11 @@ nav ul li
 	margin: 1px auto;
 }
 
+nav a
+{
+	font-size: 12.4px;
+}
+
 #searchform	{
 	float: left;
 	margin: 5.5em auto auto 20%;
@@ -98,7 +105,7 @@ nav ul li
 	text-transform: uppercase;
 	color: #444;
 	border: #888 solid 1px;
-	background: #dbcca9;
+	/*background: #dbcca9;*/
 }
 #searchbox	{
 	font-family: "Calibri","Helvetica", sans-serif;
@@ -168,6 +175,11 @@ nav ul li
 
 
 /* HOMEPAGE */
+
+#home
+{
+	/*background-image: url("../img/stripe.png");	*/
+}
 
 .featured	{
 	width: 80%;
