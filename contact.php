@@ -27,35 +27,118 @@
 	<div class="content">
 		<div class="container">
 			<h2>Contact</h2>
+            
+            <div class="peeps">
 			
-			<div class="container">				
-				<dl>
-					<dt>David Parsons</dt>
-						<dd>
-							<a href="#">email</a>
-						</dd>
+                <div class="container">				
+                    <dl>
+                        <div class="grouppreview">
+                            <dt><h3>David Parsons</h3></dt>
+                        	<dd class="part1">
+                                	<img class="grouppic" src="" alt="picture of David" />
+								</dd>
+                                <dd class="part2">
+                                	<ul>
+	                                	<li><h3> List of Responsibilities</h3></li><br />
+                                    	<li>Some of this</li>
+                                        <li>Some of that</li>
+                                        <li></li>
+                                    </ul>                                
+                                </dd>
+                                <dd class="part3">
+                                	<ul>
+	                                	<li><h3>How to Contact</h3></li><br />
+                                    	<li> <a href="#">email</a></li>
+                                    </ul> 
+                                </dd>
+                        </div>
+                        
+                        <div class="grouppreview">
+                            <dt><h3>Kristyle Carter</h3></dt>
+                            	<dd class="part1">
+                                	<img class="grouppic" src="img/grouppics/KristyC.jpg" alt="picture of Kristy" />
+								</dd>
+                                <dd class="part2">
+                                	<ul>
+	                                	<li><h3> List of Responsibilities</h3></li><br />
+                                    	<li>Group Manager</li>
+                                        <li>Coordinating Tasks</li>
+                                        <li>Other Stuff (adding more later!) </li>
+                                    </ul>                                
+                                </dd>
+                                <dd class="part3">
+                                	<ul>
+	                                	<li><h3>How to Contact</h3></li><br />
+                                    	<li> <a href="#">email</a></li>
+                                    </ul> 
+                                </dd>
+                        </div>
+                        
+                        <div class="grouppreview">
+                            <dt><h3>Matt Kleinberg</h3></dt>
+                        	<dd class="part1">
+                                	<img class="grouppic" src="" alt="picture of Matt" />
+								</dd>
+                                <dd class="part2">
+                                	<ul>
+	                                	<li><h3> List of Responsibilities</h3></li><br />
+                                    	<li>Some of this</li>
+                                        <li>Some of that</li>
+                                        <li></li>
+                                    </ul>                                
+                                </dd>
+                                <dd class="part3">
+                                	<ul>
+	                                	<li><h3>How to Contact</h3></li><br />
+                                    	<li> <a href="#">email</a></li>
+                                    </ul> 
+                                </dd>
+                        </div>
+                        
+                        <div class="grouppreview">
+                            <dt><h3>Sherry McReally Long Last Name That Juan Cant Remember</h3></dt>
+                        	<dd class="part1">
+                                	<img class="grouppic" src="" alt="picture of Sherry" />
+								</dd>
+                                <dd class="part2">
+                                	<ul>
+	                                	<li><h3> List of Responsibilities</h3></li><br />
+                                    	<li>Some of this</li>
+                                        <li>Some of that</li>
+                                        <li></li>
+                                    </ul>                                
+                                </dd>
+                                <dd class="part3">
+                                	<ul>
+	                                	<li><h3>How to Contact</h3></li><br />
+                                    	<li> <a href="#">email</a></li>
+                                    </ul> 
+                                </dd>
+                        </div>
 
-					<dt>Kristyle Carter</dt>
-						<dd>
-							<a href="#">email</a>
-						</dd>
-
-					<dt>Matt Kleinberg</dt>
-						<dd>
-							<a href="#">email</a>
-						</dd>
-
-					<dt>Sherry McReallyLongLastNameThatJuanCantRemember</dt>
-						<dd>
-							<a href="#">email</a>
-						</dd>
-
-					<dt>Juan Valera</dt>
-						<dd>
-							<a href="#">email</a>
-						</dd>
-											
-				</dl>
+						<div class="grouppreview">
+							<dt><h3>Juan Valera</h3></dt>
+                        	<dd class="part1">
+                                	<img class="grouppic" src="" alt="picture of Juan" />
+								</dd>
+                                <dd class="part2">
+                                	<ul>
+	                                	<li><h3> List of Responsibilities</h3></li><br />
+                                    	<li>Some of this</li>
+                                        <li>Some of that</li>
+                                        <li></li>
+                                    </ul>                                
+                                </dd>
+                                <dd class="part3">
+                                	<ul>
+	                                	<li><h3>How to Contact</h3></li><br />
+                                    	<li> <a href="#">email</a></li>
+                                    </ul> 
+                                </dd>
+                        </div>
+										
+                    </dl>
+                </div>
 
 			</div>
 		</div>

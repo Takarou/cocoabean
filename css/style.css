@@ -340,3 +340,56 @@ footer sup	{
 	padding: 0 0 1em 0;
 	height: 100%;
 }
+
+/*  Contact  */
+
+.grouppreview	{
+	float: left;
+	width: 64em;
+	height: 24em;
+	margin: 2em 3em 1em 3em;
+	border: #744508 3px solid;
+	padding: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: #ebddce;
+}
+
+.grouppreview img	{
+	width: 200px;
+	height: 280px;
+}
+.grouppreview p, ul	{
+	text-align: left;
+}
+
+.grouppreview h3	{
+	font-weight: bold;
+	text-align: left;
+}
+
+.grouppreview dt h3	{
+	font-weight: bold;
+	text-align: left;
+	font-size:2em;
+}
+
+.grouppreview dt	{
+	float:left;
+	width:7em;
+}
+
+.grouppic	{
+	float:left;
+}
+
+.peeps	{
+	margin: 0 auto;
+}
+
+.part1, .part2, .part3	{
+	float:left;
+	padding:0 0 0 5em;
+}
+
