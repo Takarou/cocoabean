@@ -305,6 +305,19 @@ nav ul li
 .preview h3 a:hover	{
 	text-decoration: underline;
 }
+
+
+/* CRUD */
+#crud form legend
+{
+	font-weight: bold;
+}
+#crud form input
+{
+	margin: 10px 0 0 25px;	
+}
+
+
 	
 /* FOOTER */
 
