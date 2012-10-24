@@ -21,7 +21,9 @@
                 <div class="container">				
                     <dl>
                         <div class="grouppreview">
-                            <dt><h3>David Parsons</h3></dt>
+                            <dt><h3>David Parsons</h3><br />
+                            <p>Bio: <br /><br /> Stuff and things </p>
+                            </dt>
                         	<dd class="part1">
                                 	<img class="grouppic" src="" alt="picture of David" />
 								</dd>
@@ -42,7 +44,9 @@
                         </div>
                         
                         <div class="grouppreview">
-                            <dt><h3>Kristyle Carter</h3></dt>
+                            <dt><h3>Kristyle Carter</h3><br />
+                            <p>Bio: <br /><br />AKA Kristy is a web designer and enjoys making this look pretty.  Along with long walks on the beach.</p>
+                            </dt>
                             	<dd class="part1">
                                 	<img class="grouppic" src="img/grouppics/KristyC.jpg" alt="picture of Kristy" />
 								</dd>
@@ -63,7 +67,9 @@
                         </div>
                         
                         <div class="grouppreview">
-                            <dt><h3>Matt Kleinberg</h3></dt>
+                            <dt><h3>Matt Kleinberg</h3><br />
+                            <p>Bio: <br /><br /> Stuff and things </p>
+                            </dt>
                         	<dd class="part1">
                                 	<img class="grouppic" src="" alt="picture of Matt" />
 								</dd>
@@ -84,7 +90,9 @@
                         </div>
                         
                         <div class="grouppreview">
-                            <dt><h3>Sherry McReally Long Last Name That Juan Cant Remember</h3></dt>
+                            <dt><h3>Sherry McReally Long Last Name That Juan Cant Remember</h3><br />
+                            <p>Bio: <br /><br /> Stuff and things </p>
+                            </dt>
                         	<dd class="part1">
                                 	<img class="grouppic" src="" alt="picture of Sherry" />
 								</dd>
@@ -105,16 +113,19 @@
                         </div>
 
 						<div class="grouppreview">
-							<dt><h3>Juan Valera</h3></dt>
+							<dt><h3>Juan Valera</h3><br />
+                            <p>Bio: <br /><br />Juan Valera is a web and mobile developer with a background in user-centered design.</p>
+                            </dt>
                         	<dd class="part1">
                                 	<img class="grouppic" src="" alt="picture of Juan" />
 								</dd>
                                 <dd class="part2">
                                 	<ul>
 	                                	<li><h3> List of Responsibilities</h3></li><br />
-                                    	<li>Some of this</li>
-                                        <li>Some of that</li>
-                                        <li></li>
+                                    	<li>Styling</li>
+                                        <li>Frond End Development</li>
+                                        <li>Back End Development</li>
+                                        <li>A little of this a little of that</li>
                                     </ul>                                
                                 </dd>
                                 <dd class="part3">
