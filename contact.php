@@ -137,19 +137,35 @@
                                 
                         </div>
                         
-                        <div class="grouppreview"
-	           				<ul>
-                                <li><h3>Where we are located</h3></li><br />
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>                 
+                        <div class="grouppreview">
+							<dt><h3>Contact US</h3><br />
+
+                            </dt>
+                            
+                            <dd class="part1">
+                                <img class="grouppic" src="img/map.jpg" alt="map" />
+                            </dd>
+                            <dd class="part2">
+                                <ul>
+                                    <li><h3>Where we are located</h3></li><br />
+                                    <li>4000 Central Florida BLVD</li>
+                                    <li>Orlando, FL 32816</li>
+                                    <li>Visual Arts Building</li>
+                                </ul>  
+                            </dd> 
+                            <dd class="part3">
+                                	<ul>
+	                                	<li><h3>How to Contact Us</h3></li><br />
+                                    	<li> <a href="#">email</a></li><br />
+                                        <li>Call:555-555-5555</li>
+                                    </ul> 
+                                </dd>              
     					</div> 
 										
                     </dl>
                 </div>
 			
-                   
+                </div>   
             
 			</div>
 		</div>
