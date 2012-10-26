@@ -9,12 +9,28 @@ body	{
 
 /* HEADER */
 
-header	{
+header	
+{
 	width: 80%;
 	height: 165px;
 	margin: 0 auto;
-	border-bottom: #888 1px solid;
-	
+	border-bottom: #888 1px solid;	
+}
+header #cart #signup
+{
+	color: blue;
+}
+header #header-login form
+{
+	clear: left;
+}
+header #header-login
+{
+	width: 500px;
+}
+header #header-login form legend
+{
+	float: left;
 }
 
 h1#logo	
@@ -65,13 +81,22 @@ header a:hover	{
 	line-height: 0.8em;
 }
 
-#scart	{
+.cart input[id="username"]
+{
+	width: 100px;
+}
+.cart input[id="password"]
+{
+	width: 100px;
+}
+
+#cart-image	{
 	background: url('../img/cart.png') top center no-repeat;
 	padding: 35px 15px 0px 15px;
 	font-size: 1em;
 }
 
-#scart a	{
+#cart-image a	{
 	letter-spacing: .15em;
 }
 
@@ -97,7 +122,7 @@ nav a
 
 #searchform	{
 	float: left;
-	margin: 5.5em auto auto 20%;
+	margin: 5.5em auto auto 58px;
 }
 
 #search	{
