@@ -14,7 +14,7 @@
 	
 	<div class="content">
 		<div class="container">
-			<h2>Contact</h2>
+			<h2>Company Bio</h2>
             
             <div class="peeps">
 			
@@ -135,10 +135,21 @@
                                     </ul> 
                                 </dd>
                         </div>
+                        
+                        <div class="grouppreview"
+	           				<ul>
+                                <li><h3>Where we are located</h3></li><br />
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>                 
+    					</div> 
 										
                     </dl>
                 </div>
-
+			
+                   
+            
 			</div>
 		</div>
 	</div><!--/.content-->
