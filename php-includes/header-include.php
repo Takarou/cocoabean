@@ -6,20 +6,20 @@
 		<input type="submit" id="search" value="Search" />
 	</form>
 
-	<div class="cart">
-		<a id="signup" href="#">Sign up</a>
-
+	<div class="cart">		
 		<form action="login.php" method="post">
-			<input id="username" placeholder="Username" type="text"></input>			
-			<input id="password" placeholder="Password" type="text"></input>
-			<input type="submit" value="Submit"></input>
+			<input id="login-username" placeholder="Username" type="text"></input>	
+			<input id="login-password" placeholder="Password" type="text"></input>
+			<input id="login-submit" type="submit" value="Submit"></input>
+			<a id="login-signup" href="#">Sign up</a>
 		</form>
-
-		<div id="cart-image">
-			<a href="cart.php">Checkout</a>
-		</div>
-		<a href="cart.php">3 items</a>
-	</div>
+		
+		<div id="cart-contents">			
+			<a href="cart.php">In your cart: 3 items</a><br/>			
+			<a href="cart.php" id="cart-checkout">Checkout</a><br/>
+		</div>		
+		<div id="cart-image"></div>
+	</div><!--/.cart-->
 		
 	<nav>
 		<ul>

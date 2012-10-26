@@ -12,13 +12,10 @@ body	{
 header	
 {
 	width: 80%;
-	height: 165px;
+	/*height: 165px;*/
+	height: 175px;
 	margin: 0 auto;
 	border-bottom: #888 1px solid;	
-}
-header #cart #signup
-{
-	color: blue;
 }
 header #header-login form
 {
@@ -63,41 +60,66 @@ header a:hover	{
 	color: #74c9db;
 }
 
-.current a	{
+header .current a	{
 	color: #74c9db;
 	text-decoration: none;
 }
 
-.cart	
+header .cart	
 {
 	float: right;
-	margin: 3.75em 1em auto auto;
+	margin: 5.45em 0 0 0;
 }
 
-.cart li	{
-	font-size: 0.9em;
+header .cart input[id="login-username"]
+{
+	width: 100px;
+	height: 11.5px;
+}
+header .cart input[id="login-password"]
+{
+	width: 100px;
+	height: 11.5px;
+}
+header .cart input[id="login-submit"]
+{
+	font-family: "Calibri","Helvetica", sans-serif;
 	text-transform: uppercase;
-	text-align: center;
-	line-height: 0.8em;
+	color: #444;
+	border: #888 solid 1px;
+	background: #dbcca9;
 }
-
-.cart input[id="username"]
+header .cart #login-signup
 {
-	width: 100px;
+	font-size: 10px;
+	margin-left: 5px;
+	position: relative;
+	top: 4px;
+	letter-spacing: 0.1em;
 }
-.cart input[id="password"]
+header .cart #cart-contents
 {
-	width: 100px;
+	width: 230px;
+	margin-top: 20px;
+	margin-bottom: -20px;
 }
-
-#cart-image	{
+header .cart #cart-checkout
+{
+	color: rgb(100,100,230);
+}
+header .cart #cart-checkout:hover
+{
+	/*color: rgb(200,100,100);*/
+}
+header #cart-image	
+{
 	background: url('../img/cart.png') top center no-repeat;
-	padding: 35px 15px 0px 15px;
-	font-size: 1em;
-}
-
-#cart-image a	{
-	letter-spacing: .15em;
+	width: 30px;
+	height: 30px;
+	float: right;	
+	position: relative;
+	top: -10px;
+	left: -55px;
 }
 
 nav	
@@ -105,6 +127,7 @@ nav
 	clear: both;
 	width: 85%;
 	margin: 0 auto;
+	padding-top: 12px;
 }
 
 nav ul li	
@@ -120,19 +143,19 @@ nav a
 	font-size: 12.4px;
 }
 
-#searchform	{
+header #searchform	{
 	float: left;
 	margin: 5.5em auto auto 58px;
 }
 
-#search	{
+header #search	{
 	font-family: "Calibri","Helvetica", sans-serif;
 	text-transform: uppercase;
 	color: #444;
 	border: #888 solid 1px;
-	/*background: #dbcca9;*/
+	background: #dbcca9;
 }
-#searchbox	{
+header #searchbox	{
 	font-family: "Calibri","Helvetica", sans-serif;
 	text-transform: uppercase;
 	color: #444;
