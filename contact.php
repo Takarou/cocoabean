@@ -8,7 +8,7 @@
 
     <script type="text/javascript" src="js/google-analytics.js"></script>
 </head>
-<body id="Contact">
+<body id="contact">
 	
 	<?php include 'php-includes/header-include.php'; ?>
 	
@@ -134,6 +134,7 @@
                                     	<li> <a href="#">email</a></li>
                                     </ul> 
                                 </dd>
+                                
                         </div>
                         
                         <div class="grouppreview"
