@@ -295,7 +295,7 @@ h2 a:hover	{
 #checkout .container ul input	{
 	display: block;
 	margin-bottom: .5em;
-	width: 15em;
+	width: 18em;
 }
 
 #checkout fieldset.submit	{
@@ -410,24 +410,13 @@ footer sup	{
 /*  CONTACT  */
 
 .grouppreview	{
-	float: left;
-	width: 64em;
-	height: 24em;
-	margin: 2em 3em 1em 3em;
 	border: #744508 3px solid;
-	padding: 1em;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	background: #ebddce;
-}
-
-.grouppreview img	{
-	width: 200px;
-	height: 280px;
-}
-.grouppreview p, ul	{
-	text-align: left;
+	padding:.5em;
+	margin:.5em;
 }
 
 .grouppreview h3	{
@@ -443,7 +432,6 @@ footer sup	{
 
 .grouppreview dt	{
 	float:left;
-	width:13em;
 }
 
 .grouppic	{
