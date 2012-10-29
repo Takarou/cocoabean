@@ -30,7 +30,7 @@
     	<div class="row">
         	<div class="twelvecol last">
                 <h2><a href="item.php?id=2">Chocolate Chip Cookie Dough Cheesecake</a><br /><span class="price">Now Only $34.99!</span></h2>
-                <img class="featured" src="img/cheesecake002.jpg" alt="" />
+	                <img src="img/cheesecake002.jpg" alt="" />
 			</div>		
 		</div>
         
@@ -47,6 +47,7 @@
             <div class="sixcol last">
             	<img src="img/shop.jpg" class="shop" alt="The Shop" />
             </div>
+    	</div>
     </div>
 
 	<?php include 'php-includes/footer-include.php'; ?>

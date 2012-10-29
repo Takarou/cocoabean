@@ -26,13 +26,11 @@
 
 	<?php include 'php-includes/header-include.php'; ?>
 
-	<div class="content">
-		<div class="container">
-			<form  method="post" action="#"  id="admin"> 
-			
-			</form>
-		</div>
-	</div>
+    <div class="container">
+        <form  method="post" action="#"  id="admin"> 
+        
+        </form>
+    </div>
 
 	<?php include 'php-includes/footer-include.php'; ?>
 	
