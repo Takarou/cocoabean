@@ -1,5 +1,9 @@
 <header>
-	<h1 id="logo"><a href="index.php">Cocoa Bean: Gourmet Chocolate Treats</a></h1>	
+	<div id="logo">
+		<h1><a href="index.php">Cocoa Bean</a></h1>
+	</div>
+	
+	<!-- <h1 id="logo"><a href="index.php">Cocoa Bean: Gourmet Chocolate Treats</a></h1>	 -->
 
 	<form method="post" action="search.php" id="searchform"> 
 		<input type="search" id="searchbox" /> 
