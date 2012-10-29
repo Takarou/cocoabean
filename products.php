@@ -26,18 +26,16 @@
 	
 	<?php include 'php-includes/header-include.php'; ?>
 	
-	<div class="content">
-		<div class="container">
-		<h2>Products</h2>
-		
-		<?php 
-			// here we dynamically create this page depending on what category was clicked earlier.			
-			$selectedCategory = $_GET["category"];			
-			print("selectedCategory = ".$selectedCategory);			
-		?>
+    <div class="container">
+    <h2>Products</h2>
+    
+    <?php 
+        // here we dynamically create this page depending on what category was clicked earlier.			
+        $selectedCategory = $_GET["category"];			
+        print("selectedCategory = ".$selectedCategory);			
+    ?>
 
-		</div><!--/.container-->
-	</div><!--/.content-->
+    </div><!--/.container-->
 
 	<?php include 'php-includes/footer-include.php'; ?>
 	
