@@ -7,6 +7,20 @@ body	{
 	font-size: 0.75em;
 }
 
+
+/* FONTS */
+@font-face 
+{
+    font-family: "Trajan Pro";
+    src: url("../fonts/TrajanPro-Regular.otf") format("opentype");
+}
+@font-face 
+{
+    font-family: "Trajan Pro Bold";
+    src: url("../fonts/TrajanPro-Bold.otf") format("opentype");
+}
+
+
 /* HEADER */
 
 header	
@@ -30,15 +44,27 @@ header #header-login form legend
 	float: left;
 }
 
-h1#logo	
-{
-	text-indent: -9001px;
-	overflow: hidden;
-	width: 400px;
-	height: 146px;
+div#logo	
+{	
+	width: 400px;	
+	height: 135px;
 	margin: 4px 0 -4px 0;
-	background: url("../img/logo.png") top left no-repeat;
+	background: url("../img/logo.png") no-repeat;
 	float: left;
+}
+div#logo h1 a
+{
+	height: 35px;
+	widows: 285px;
+	text-transform: none;
+	font-family: "Trajan Pro Bold","Times New Roman",serif;
+	font-size:41px;
+	letter-spacing: 0.2px;
+	word-spacing: -6px;
+	color: rgb(105,63,8);
+	position: relative;
+	top: 57px;
+	left: 135px;
 }
 
 h1 a	{
