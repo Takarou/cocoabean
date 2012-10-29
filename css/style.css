@@ -250,17 +250,11 @@ header #searchbox	{
 
 /* HOMEPAGE */
 
-#home
-{
-	/*background-image: url("../img/stripe.png");	*/
-}
-
 .featured	{
-	width: 80%;
-	margin: 5px auto;
+	z-index: 1;
 }
 
-.featured h2	{
+h2	{
 	position: relative;
 	z-index: 2;
 	top: 25px;
@@ -275,30 +269,17 @@ header #searchbox	{
 	text-align: center;
 }
 
-.featured h2 a	{
+h2 a	{
 	color: #fff3d6;
 	text-decoration: none;
 }
 
-.featured h2 a:hover	{
+h2 a:hover	{
 	color: #ffd49c;
 }
 
-.featured p.price	{
-	z-index: 2;
-	color: #fff3d6;
-	position: relative;
-	top: 25px;
-	font-size: 1.5em;
-	line-height: 1.7em;
-	background: rgba(116, 69, 8, 0.5);
-	text-align: center;
-	-moz-text-shadow: 1px 1px 1px #744508;
-	-webkit-text-shadow: 1px 1px 1px #744508;
-	text-shadow: 1px 1px 1px #744508;
-}
 
-.featured img	{
+img	{
 	width: 100%;
 	height: 550px;
 	z-index: 1;
