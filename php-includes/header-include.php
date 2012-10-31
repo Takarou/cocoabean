@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include 'database.php';
+?>
 <header>
 	<div id="logo">
 		<h1><a href="index.php">Cocoa Bean</a></h1>
@@ -8,14 +12,40 @@
 		<input type="submit" id="search" value="Search" />
 	</form>
 
-	<div class="cart">		
-		<form action="login.php" method="post">
-			<input id="login-username" placeholder="Username" type="text"></input>	
-			<input id="login-password" placeholder="Password" type="text"></input>
-			<input id="login-submit" type="submit" value="Submit"></input>
-			<a id="login-signup" href="#">Sign up</a>
-		</form>
-		
+	<div class="cart">	
+		<?php
+			if(isset($_SESSION['user'])){
+				echo '<span>Welcome: '.$_SESSION['user'].'</span>&nbsp;<span><a href="logout.php">Logout</a></span>';
+			}else{
+				if(isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])){
+					$username = $_POST['username'];
+					$username = stripslashes($username);
+					$username = mysql_real_escape_string($username);
+					$password = $_POST['password'];
+					$password = stripslashes($password);
+					$password = mysql_real_escape_string($password);
+					$password = md5($password);
+					
+					if(isset($_POST['login']) && !empty($username) && !empty($password)){
+						$userQuery = mysql_query("SELECT username FROM users WHERE username='$username' AND password='$password'");
+						
+						$count = mysql_num_rows($userQuery);
+						if($count == 1){
+							$_SESSION['user'] = $username;
+							header('location: index.php');
+						}else{
+							echo "Incorrect Username or Password";
+						}
+					}
+				}
+				echo '<form action="" method="post">
+						<input id="login-username" placeholder="Username" type="text" name="username" />	
+						<input id="login-password" placeholder="Password" type="password" name="password" />
+						<input id="login-submit" type="submit" value="Submit" name="login" />
+						<a id="login-signup" href="signup.php">Sign up</a>
+					</form>';
+			}
+		?>
 		<div id="cart-contents">			
 			<a href="cart.php">In your cart: 3 items</a><br/>			
 			<a href="cart.php" id="cart-checkout">Checkout</a><br/>
