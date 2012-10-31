@@ -94,11 +94,11 @@
         <div class="row">
             <div class="threecol">                
                 <h3>Matt Kleinberg</h3><br />
-                    <p>Bio: <br /><br />Matt Kleinberg is a web developer with specilizations in backend php development and front end javascript coding.</p>
+                    <p>Bio: <br /><br />Matt Kleinberg is a web developer with specilizations in back end php development and front end javascript coding.</p>
             </div>
             
             <div class="threecol">
-                <img class="grouppic" src="" alt="picture of Matt" />
+                <img class="grouppic" src="img/grouppics/Matt.jpg" alt="picture of Matt" />
             </div>
             
             <div class="threecol">
@@ -107,7 +107,7 @@
                     <li>Login system</li>
                     <li>Cart</li>
                     <li>Search</li>
-					<li>Most of all the backend features</li>
+					<li>Most of all the back end features</li>
                 </ul>                                
             </div>
             
