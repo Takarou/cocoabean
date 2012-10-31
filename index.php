@@ -29,8 +29,10 @@
 	<div class="container">
     	<div class="row">
         	<div class="twelvecol last">
-                <h2><a href="item.php?id=2">Chocolate Chip Cookie Dough Cheesecake</a><br /><span class="price">Now Only $34.99!</span></h2>
-	                <img src="img/cheesecake002.jpg" alt="" />
+        		<div>
+        			<h2><a href="item.php?id=2">Chocolate Chip Cookie Dough Cheesecake</a><br /><span class="price">Now Only $34.99!</span></h2>
+	                <img src="img/cheesecake002.jpg" alt="" />	
+        		</div>                
 			</div>		
 		</div>
         
