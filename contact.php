@@ -157,7 +157,7 @@
             </div>
             
             <div class="threecol">
-                  <img class="grouppic" src="" alt="picture of Juan" />
+                  <img class="grouppic" src="img/grouppics/JuanV.jpg" alt="picture of Juan" />
             </div>
             
             <div class="threecol">
