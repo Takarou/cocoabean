@@ -14,9 +14,14 @@
 
 	<div class="cart">	
 		<?php
-			if(isset($_SESSION['user'])){
+			// if user already exists, switch login form for logout form in header-include.
+			if(isset($_SESSION['user']))
+			{
 				echo '<span>Welcome: '.$_SESSION['user'].'</span>&nbsp;<span><a href="logout.php">Logout</a></span>';
-			}else{
+			}
+			else
+			{
+				// if user does not already exist, check for valid login credentials.
 				if(isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])){
 					$username = $_POST['username'];
 					$username = stripslashes($username);
@@ -26,14 +31,19 @@
 					$password = mysql_real_escape_string($password);
 					$password = md5($password);
 					
-					if(isset($_POST['login']) && !empty($username) && !empty($password)){
+					if(isset($_POST['login']) && !empty($username) && !empty($password))
+					{
 						$userQuery = mysql_query("SELECT username FROM users WHERE username='$username' AND password='$password'");
 						
 						$count = mysql_num_rows($userQuery);
-						if($count == 1){
+
+						if($count == 1)
+						{
 							$_SESSION['user'] = $username;
 							header('location: index.php');
-						}else{
+						}
+						else
+						{
 							echo "Incorrect Username or Password";
 						}
 					}
@@ -56,9 +66,9 @@
 	<nav>
 		<ul>
 			<li><a href="index.php">Home</a></li>
-			<li><a href="products.php?category=Cakes">Cakes</a></li>
+			<li><a href="products.php?category=Cake">Cakes</a></li>
 			<li><a href="products.php?category=Cheesecake">Cheesecake</a></li>
-			<li><a href="products.php?category=Druit">Drinks</a></li>
+			<li><a href="products.php?category=Drinks">Drinks</a></li>
 			<li><a href="products.php?category=Fruit">Fruit</a></li>
 			<li><a href="products.php?category=Specialty">Specialty</a></li>
 			<li><a href="contact.php">Contact Us</a></li>

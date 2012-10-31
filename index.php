@@ -24,7 +24,7 @@
 </head>
 <body id="home">
 	
-	<?php include 'php-includes/header-include.php'; ?>
+	<?php include "php-includes/header-include.php"; ?>
 	
 	<div class="container">
     	<div class="row">
