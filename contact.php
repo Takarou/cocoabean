@@ -94,7 +94,7 @@
         <div class="row">
             <div class="threecol">                
                 <h3>Matt Kleinberg</h3><br />
-                    <p>Bio: <br /><br /> Stuff and things </p>
+                    <p>Bio: <br /><br />Matt Kleinberg is a web developer with specilizations in backend php development and front end javascript coding.</p>
             </div>
             
             <div class="threecol">
@@ -104,9 +104,10 @@
             <div class="threecol">
                 <ul>
                     <li><h3> List of Responsibilities</h3></li><br />
-                    <li>Some of this</li>
-                    <li>Some of that</li>
-                    <li></li>
+                    <li>Login system</li>
+                    <li>Cart</li>
+                    <li>Search</li>
+					<li>Most of all the backend features</li>
                 </ul>                                
             </div>
             
