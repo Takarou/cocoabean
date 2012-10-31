@@ -1,3 +1,6 @@
+<?php
+	include 'database.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +31,14 @@
 
 	<div class="content">
 		<div class="container">
-			
+			<?php
+				$searchTerm = $_POST['searchArea'];
+				
+				$return = array();
+				$query = mysql_query("SELECT * FROM product WHERE productName LIKE '%$searchTerm%'")or die($query."<br/><br/>".mysql_error());
+				while($row = mysql_fetch_array($query))
+					echo $row['productName'].'<br />';
+			?>
 		</div>
 	</div>
 
