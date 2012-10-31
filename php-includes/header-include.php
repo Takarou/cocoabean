@@ -4,7 +4,7 @@
 	</div>
 	
 	<form method="post" action="search.php" id="searchform"> 
-		<input type="search" id="searchbox" /> 
+		<input type="search" id="searchbox" name="searchArea" /> 
 		<input type="submit" id="search" value="Search" />
 	</form>
 

@@ -182,14 +182,12 @@ header #searchform	{
 
 header #search	{
 	font-family: "Calibri","Helvetica", sans-serif;
-	text-transform: uppercase;
 	color: #444;
 	border: #888 solid 1px;
 	background: #dbcca9;
 }
 header #searchbox	{
 	font-family: "Calibri","Helvetica", sans-serif;
-	text-transform: uppercase;
 	color: #444;
 	border: #888 solid 1px;
 	width: 15em;
