@@ -32,9 +32,8 @@
         <div class="grouppreview">
             <div class="row">
                 <div class="threecol">
-                    <dt><h3>David Parsons</h3><br />
-                        <p>Bio: <br /><br /> Stuff and things </p>
-                    </dt>
+                	<h3>David Parsons</h3><br />
+                    <p>Bio: <br /><br /> Stuff and things </p>
                 </div>
                 
                 <div class="threecol">
@@ -65,9 +64,8 @@
     <div class="grouppreview">
         <div class="row">
             <div class="threecol">
-                <dt><h3>Kristyle Carter</h3><br />
+                <h3>Kristyle Carter</h3><br />
                     <p>Bio: <br /><br />AKA Kristy is a web designer and enjoys making this look pretty.  Along with long walks on the beach.</p>
-                </dt>
             </div>
                         
             <div class="threecol">
@@ -95,9 +93,8 @@
     <div class="grouppreview">
         <div class="row">
             <div class="threecol">                
-                <dt><h3>Matt Kleinberg</h3><br />
+                <h3>Matt Kleinberg</h3><br />
                     <p>Bio: <br /><br /> Stuff and things </p>
-                </dt>
             </div>
             
             <div class="threecol">
@@ -125,9 +122,8 @@
     <div class="grouppreview">
         <div class="row">
             <div class="threecol">
-                <dt><h3>Sherry McReally Long Last Name That Juan Cant Remember</h3><br />
+                <h3>Sherry McReally Long Last Name That Juan Cant Remember</h3><br />
                 <p>Bio: <br /><br /> Stuff and things </p>
-                </dt>
             </div>
             
             <div class="threecol">
@@ -156,9 +152,8 @@
 	<div class="grouppreview">
         <div class="row">
             <div class="threecol">            
-                <dt><h3>Juan Valera</h3><br />
+                <h3>Juan Valera</h3><br />
                 <p>Bio: <br /><br />Juan Valera is a web and mobile developer with a background in user-centered design.</p>
-                </dt>
             </div>
             
             <div class="threecol">
@@ -189,8 +184,7 @@
         <div class="row">
         
             <div class="threecol">
-                <dt><h3>Contact US</h3><br />
-                </dt>
+                <h3>Contact US</h3><br />
             </div>
             
             <div class="threecol">
