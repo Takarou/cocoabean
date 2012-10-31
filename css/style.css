@@ -1,6 +1,5 @@
-@import "reset.css";
-
-body	{
+body	
+{
 	background: #fff;
 	font-family: "Tahoma", "Arial", sans-serif;
 	color:#333;
@@ -159,7 +158,7 @@ nav
 nav ul li	
 {
 	display: inline-block;
-	width: 19%;
+	width: 14%;
 	text-align: center;
 	margin: 1px auto;
 }

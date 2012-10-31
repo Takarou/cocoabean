@@ -25,10 +25,12 @@
 		
 	<nav>
 		<ul>
-			<li><a href="products.php?category=cheesecake">Cheesecake</a></li>
-			<li><a href="products.php?category=truffles">Truffles</a></li>
-			<li><a href="products.php?category=fruit">Fruit</a></li>
-			<li><a href="products.php?category=cupcakes">Cupcakes</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="products.php?category=Cakes">Cakes</a></li>
+			<li><a href="products.php?category=Cheesecake">Cheesecake</a></li>
+			<li><a href="products.php?category=Druit">Drinks</a></li>
+			<li><a href="products.php?category=Fruit">Fruit</a></li>
+			<li><a href="products.php?category=Specialty">Specialty</a></li>
 			<li><a href="contact.php">Contact Us</a></li>
 		</ul>	
 	</nav>				

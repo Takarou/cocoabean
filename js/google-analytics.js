@@ -1,4 +1,4 @@
-console.log("Google Analytics loaded.");
+// console.log("Google Analytics loaded.");
 var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35778705-1']);
   _gaq.push(['_trackPageview']);
