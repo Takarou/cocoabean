@@ -56,7 +56,7 @@
 		                	<img src='".$results['productImg']."' alt='".$results['productName']."'></img>
 		                	<h3>".$results['productName']."</h3>
 		                	<p>$".$results['price']."</p>
-		                	<a href='#'>Add to Cart</a>
+		                	<a class='buy-button' id='id_".$results['id']."'>Add to Cart</a>
 		                    <p>".$results['sDesc']."</p>
 		                    <p> Rating: ".$results['rating']."</p>
 		                </div>
