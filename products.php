@@ -18,6 +18,8 @@
 	</style>
 		
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/cart.js"></script>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
     
 	<script type="text/javascript" src="js/google-analytics.js"></script>
@@ -72,12 +74,12 @@
 				echo "<div class='catalog-product'>";						
 					echo "<img class='catalog-product-image' src='".$results["productImg"]."' alt='".$results["productName"]."'></img>";
 					echo "<p class='catalog-product-price'>$".$results["price"]."</p>";
-					echo "<a class='buy-button' href='#'>Add to cart</a>";
+					echo "<a class='buy-button' id='id_".$results['id']."'>Add to cart</a>";
 					echo "<h3>".$results['productName']."</h3>";
 					echo "<p class='catalog-description'>".$results["lDesc"]."</p>";
 					echo "<p class='product-rating'>Rating: ".$results["rating"]."</p>";
 				echo "</div>";
-			}				
+			}
 	    ?>
 
     </div><!--/.container-->
