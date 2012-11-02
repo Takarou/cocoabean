@@ -25,8 +25,7 @@
                     </form>
                 </div>
             </div>
-            
-            
+                        
             <div class="cart">
                     
             	<?php
@@ -118,9 +117,7 @@
 		</div>
     
 	    <div class="row">
-	    	<div class="twelve last">
-	        	<div class="line"></div>
-	        </div>
+	    	<div class="twelve last line"></div>
 	   	</div>		
 
    </div><!--/.row-->
