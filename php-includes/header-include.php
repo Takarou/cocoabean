@@ -4,6 +4,7 @@
 ?>
 <header>
 	<div class="row">
+
     	<div class="logo">
             <div class="twocol last">
                 <img src="img/logo.png" alt="logo" />
@@ -17,8 +18,7 @@
             </div>
     
             <div class="check">
-            <div class="threecol">
-            	
+            	<div class="threecol">            	
                     <form method="post" action="search.php" id="searchform"> 
                         <input type="search" id="searchbox" /> 
                         <input type="submit" id="search" value="Search" />
@@ -38,7 +38,8 @@
 					else
 					{
 						// if user does not already exist, check for valid login credentials.
-						if(isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])){
+						if(isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password']))
+						{
 							$username = $_POST['username'];
 							$username = stripslashes($username);
 							$username = mysql_real_escape_string($username);
@@ -63,47 +64,45 @@
 									echo "Incorrect Username or Password";
 								}
 							}
+
 						}
-						echo '<form action="" method="post">
-								<div class="onecol">
-									<input id="login-username" placeholder="Username" type="text" name="username" />
-								</div>
-								<div class="onecol">
-									<input id="login-password" placeholder="Password" type="password" name="password" />
-								</div>
-								<div class="onecol">
-									<input id="login-submit" type="submit" value="Submit" name="login" />
-								</div>
-								<div class="onecol last">
-									<a id="login-signup" href="signup.php">Sign up</a>
-								</div>
-							</form>';
+
+						echo 
+						'<form action="" method="post">
+							<div class="onecol">
+								<input id="login-username" placeholder="Username" type="text" name="username" />
+							</div>
+							<div class="onecol">
+								<input id="login-password" placeholder="Password" type="password" name="password" />
+							</div>
+							<div class="onecol">
+								<input id="login-submit" type="submit" value="Submit" name="login" />
+							</div>
+							<div class="onecol last">
+								<a id="login-signup" href="signup.php">Sign up</a>
+							</div>
+						</form>';
 					} // /else
 
 				?>
                                   
-			</div>
-        </div>
-	</div>
-        		
-    
+			</div><!--/.cart-->
+        </div><!--/.moved-->
+	</div><!--/.row-->
+        		    
     <div class="row">
-	<nav>
-		<ul>
-			<div class="onecol"><li><a href="index.php">Home</a></li></div>
-			<div class="onecol"><li><a href="products.php?category=Cakes">Cakes</a></li></div>
-			<div class="onecol"><li><a href="products.php?category=Cheesecake">Cheesecake</a></li></div>
-			<div class="onecol"><li><a href="products.php?category=Druit">Drinks</a></li></div>
-			<div class="onecol"><li><a href="products.php?category=Fruit">Fruit</a></li></div>
-			<div class="onecol"><li><a href="products.php?category=Specialty">Specialty</a></li></div>
-			<div class="onecol"><li><a href="contact.php">Contact</a></li></div>
-        </ul>	
-	</nav>
-    
-	
-
-	
-		
+		<nav>
+			<ul>
+				<div class="onecol"><li><a href="index.php">Home</a></li></div>
+				<div class="onecol"><li><a href="products.php?category=Cake">Cakes</a></li></div>
+				<div class="onecol"><li><a href="products.php?category=Cheesecake">Cheesecake</a></li></div>
+				<div class="onecol"><li><a href="products.php?category=Drinks">Drinks</a></li></div>
+				<div class="onecol"><li><a href="products.php?category=Fruit">Fruit</a></li></div>
+				<div class="onecol"><li><a href="products.php?category=Specialty">Specialty</a></li></div>
+				<div class="onecol"><li><a href="contact.php">Contact</a></li></div>
+	        </ul>	
+		</nav>
+ 
         <div id="cart-contents">
         	<div class="onecol"></div> 			
 	    	<div class="twocol">
@@ -118,9 +117,12 @@
 			<img src="img/cart.png" alt="cart" />
 		</div>
     
-    <div class="row">
-    	<div class="twelve last">
-        	<div class="line"></div>
-        </div>
-   	</div>				
+	    <div class="row">
+	    	<div class="twelve last">
+	        	<div class="line"></div>
+	        </div>
+	   	</div>		
+
+   </div><!--/.row-->
+
 </header>
