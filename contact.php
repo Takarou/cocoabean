@@ -27,25 +27,30 @@
 	<?php include 'php-includes/header-include.php'; ?>
 	
     <div class="container">
-        <h2>Company Bio</h2>
+    
+        <div class="twelvecol last"> 
+            <div class="titlebar">
+            	<h2>Company Bio</h2>
+            </div>
+    	</div>
 
         <div class="grouppreview">
             <div class="row">
                 <div class="threecol">
                 	<h3>David Parsons</h3><br />
-                    <p>Bio: <br /><br /> Stuff and things </p>
+                    <p>Bio: <br /><br /> David is a Web and Graphic Designer. "I enjoy taking naps that turn into sleep!" </p>
                 </div>
                 
                 <div class="threecol">
-                    <img class="grouppic" src="" alt="picture of David" />
+                    <img class="grouppic" src="img/grouppics/DavidR.jpeg" alt="picture of David" />
                 </div>
                 
                 <div class="threecol">
                     <ul>
                         <li><h3> List of Responsibilities</h3></li><br />
-                        <li>Some of this</li>
-                        <li>Some of that</li>
-                        <li></li>
+                        <li>Business Policies</li>
+                        <li>Use Cases</li>
+                        <li>Other things</li>
                     </ul>                                
                 </div>
                 
@@ -94,19 +99,20 @@
         <div class="row">
             <div class="threecol">                
                 <h3>Matt Kleinberg</h3><br />
-                    <p>Bio: <br /><br /> Stuff and things </p>
+                    <p>Bio: <br /><br />Matt Kleinberg is a web developer with specilizations in back end php development and front end javascript coding.</p>
             </div>
             
             <div class="threecol">
-                <img class="grouppic" src="" alt="picture of Matt" />
+                <img class="grouppic" src="img/grouppics/Matt.jpg" alt="picture of Matt" />
             </div>
             
             <div class="threecol">
                 <ul>
                     <li><h3> List of Responsibilities</h3></li><br />
-                    <li>Some of this</li>
-                    <li>Some of that</li>
-                    <li></li>
+                    <li>Login system</li>
+                    <li>Cart</li>
+                    <li>Search</li>
+					<li>Most of all the back end features</li>
                 </ul>                                
             </div>
             
@@ -157,7 +163,7 @@
             </div>
             
             <div class="threecol">
-                  <img class="grouppic" src="" alt="picture of Juan" />
+                  <img class="grouppic" src="img/grouppics/JuanV.jpg" alt="picture of Juan" />
             </div>
             
             <div class="threecol">

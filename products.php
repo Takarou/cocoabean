@@ -22,18 +22,63 @@
     
 	<script type="text/javascript" src="js/google-analytics.js"></script>
 </head>
-<body>
+<body id="products">
 	
 	<?php include 'php-includes/header-include.php'; ?>
 	
     <div class="container">
-    <h2>Products</h2>
-    
-    <?php 
-        // here we dynamically create this page depending on what category was clicked earlier.			
-        $selectedCategory = $_GET["category"];			
-        print("selectedCategory = ".$selectedCategory);			
-    ?>
+		<div class="row">
+            <div class="twelvecol last"> 
+                <div class="titlebar">
+                    <h2> Products </h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+        	<div class="threecol">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div> 
+            <div class="threecol">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div>  
+            <div class="threecol">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div>  
+            <div class="threecol last">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div>       
+        </div>
+	    
+	    <?php 
+	        // here we dynamically create this page depending on what category was clicked earlier.			
+	        $selectedCategory = $_GET["category"];			
+	        print("selectedCategory = ".$selectedCategory."<br/>");	
+
+	        // select products of selected category from database.				
+			$query = mysql_query("SELECT * FROM product WHERE category='$selectedCategory'") or die(mysql_error());				
+																													
+			// While there are more results in the result set, loop through them and echo select info out.
+			while ($results = mysql_fetch_array($query))
+			{					
+				echo "<div class='catalog-product'>";						
+					echo "<img class='catalog-product-image' src='".$results["productImg"]."' alt='".$results["productName"]."'></img>";
+					echo "<p class='catalog-product-price'>$".$results["price"]."</p>";
+					echo "<a class='buy-button' href='#'>Add to cart</a>";
+					echo "<h3>".$results['productName']."</h3>";
+					echo "<p class='catalog-description'>".$results["lDesc"]."</p>";
+					echo "<p class='product-rating'>Rating: ".$results["rating"]."</p>";
+				echo "</div>";
+			}				
+	    ?>
 
     </div><!--/.container-->
 

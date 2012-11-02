@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include 'database.php';
+?>
 <header>
 	<div class="row">
     	<div class="logo">
@@ -25,7 +29,59 @@
             
             <div class="cart">
                     
-                <form action="login.php" method="post">
+                    <?php
+			// if user already exists, switch login form for logout form in header-include.
+			if(isset($_SESSION['user']))
+			{
+				echo '<span>Welcome: '.$_SESSION['user'].'</span>&nbsp;<span><a href="logout.php">Logout</a></span>';
+			}
+			else
+			{
+				// if user does not already exist, check for valid login credentials.
+				if(isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])){
+					$username = $_POST['username'];
+					$username = stripslashes($username);
+					$username = mysql_real_escape_string($username);
+					$password = $_POST['password'];
+					$password = stripslashes($password);
+					$password = mysql_real_escape_string($password);
+					$password = md5($password);
+					
+					if(isset($_POST['login']) && !empty($username) && !empty($password))
+					{
+						$userQuery = mysql_query("SELECT username FROM users WHERE username='$username' AND password='$password'");
+						
+						$count = mysql_num_rows($userQuery);
+
+						if($count == 1)
+						{
+							$_SESSION['user'] = $username;
+							header('location: index.php');
+						}
+						else
+						{
+							echo "Incorrect Username or Password";
+						}
+					}
+				}
+				echo '<form action="" method="post">
+						<div class="onecol">
+							<input id="login-username" placeholder="Username" type="text" name="username" />
+						</div>
+						<div class="onecol">
+							<input id="login-password" placeholder="Password" type="password" name="password" />
+						</div>
+						<div class="onecol">
+							<input id="login-submit" type="submit" value="Submit" name="login" />
+						</div>
+						<div class="onecol">
+							<a id="login-signup" href="signup.php">Sign up</a>
+						</div>
+					</form>';
+			}
+		?>
+                    
+                <!--<form action="login.php" method="post">
                     <div class="onecol">
                     <input id="login-username" placeholder="Username" type="text"></input>	
                     </div>
@@ -38,7 +94,7 @@
                     <div class="onecol last">
                     <a id="login-signup" href="#">Sign up</a>
                     </div>
-                </form>
+                </form>-->
 			</div>
         </div>
 	</div>
@@ -54,8 +110,13 @@
 			<div class="onecol"><li><a href="products.php?category=Fruit">Fruit</a></li></div>
 			<div class="onecol"><li><a href="products.php?category=Specialty">Specialty</a></li></div>
 			<div class="onecol"><li><a href="contact.php">Contact</a></li></div>
-		</ul>	
+        </ul>	
+	</nav>
+    
+	
 
+	
+		
         <div id="cart-contents">
         	<div class="onecol"></div> 			
 	    	<div class="twocol">
@@ -64,11 +125,11 @@
             <div class="onecol">
                 <a href="cart.php" id="cart-checkout">Checkout</a><br/>
             </div>
-        </div>	
+        </div>
+        	
         <div class="onecol last">
 			<img src="img/cart.png" alt="cart" />
 		</div>
-    </nav>
     
     <div class="row">
     	<div class="twelve last">

@@ -24,7 +24,7 @@
 </head>
 <body id="home">
 	
-	<?php include 'php-includes/header-include.php'; ?>
+	<?php include "php-includes/header-include.php"; ?>
 	
 	<div class="container">
             <div class="row">
@@ -33,7 +33,8 @@
                         <h2><a href="item.php?id=2">Chocolate Chip Cookie Dough Cheesecake</a><br /><span class="price">Now Only $34.99!</span></h2>
                     </div>
                     <div class="featured">
-                        <img src="img/cheesecake002.jpg" alt="" />
+                        <img src="img/products/cheesecake002.jpg" alt="" />
+
                     </div>
                 </div>		
             </div>
