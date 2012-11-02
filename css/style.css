@@ -68,15 +68,6 @@ h1 a {
 	border-left-width:thick;
 }
 
-header .cart input[id="login-submit"]
-{
-	font-family: "Calibri","Helvetica", sans-serif;
-	text-transform: uppercase;
-	color: #444;
-	border: #888 solid 1px;
-	background: #dbcca9;
-}
-
 header .check input[id="search"]
 {
 	font-family: "Calibri","Helvetica", sans-serif;
@@ -85,6 +76,38 @@ header .check input[id="search"]
 	border: #888 solid 1px;
 	background: #dbcca9;
 }
+
+header .cart input[id="login-username"]
+{
+	width: 8em;
+}
+
+header .cart input[id="login-password"]
+{
+	width: 8em;
+}
+
+header .cart input[id="login-submit"]
+{
+	font-family: "Calibri","Helvetica", sans-serif;
+	text-transform: uppercase;
+	color: #444;
+	border: #888 solid 1px;
+	background: #dbcca9;		
+	width: 4.5em;
+}
+
+header .cart a#login-signup
+{
+	font-family: "Calibri","Helvetica", sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #444;
+	/*border: #888 solid 1px;*/
+	/*background: #dbcca9;		*/
+	width: 4.5em;
+}
+
 
 /* FOOTER */
 
