@@ -22,12 +22,41 @@
     
 	<script type="text/javascript" src="js/google-analytics.js"></script>
 </head>
-<body>
+<body id="products">
 	
 	<?php include 'php-includes/header-include.php'; ?>
 	
     <div class="container">
-	    <h2>Products</h2>
+		<div class="row">
+            <div class="twelvecol last"> 
+                <div class="titlebar">
+                    <h2> Products </h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+        	<div class="threecol">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div> 
+            <div class="threecol">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div>  
+            <div class="threecol">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div>  
+            <div class="threecol last">
+                <div class="product">
+                    <p>HOLDER</p>
+                </div>
+            </div>       
+        </div>
 	    
 	    <?php 
 	        // here we dynamically create this page depending on what category was clicked earlier.			

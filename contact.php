@@ -27,7 +27,12 @@
 	<?php include 'php-includes/header-include.php'; ?>
 	
     <div class="container">
-        <h2>Company Bio</h2>
+    
+        <div class="twelvecol last"> 
+            <div class="titlebar">
+            	<h2>Company Bio</h2>
+            </div>
+    	</div>
 
         <div class="grouppreview">
             <div class="row">
