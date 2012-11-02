@@ -1,6 +1,16 @@
 <?php
 	session_start();
 	include 'database.php';
+	
+	if(!isset($_SESSION['cart'])){
+		$cart = array(
+			'name' => 'test',
+			'cost' => 0
+		);
+		$_SESSION['cart'] = $cart;
+	}else if(isset($_SESSION['cart'])){
+		print_r($_SESSION['cart']);
+	}
 ?>
 <header>
 	<div class="row">
