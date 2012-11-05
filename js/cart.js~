@@ -10,7 +10,20 @@ function addToCart(itemId){
 	itemId = parseInt(itemId);
 	//console.log(itemId);
 	
-	$.post('addCart.php', {id: itemId}, function(data){
-		console.log(data);
+	/*$.post('addCart.php', {id: itemId}, function(data){
+		location.reload(true);
+	});*/
+	
+	$.ajax({
+		type: 'POST',
+		url: 'addCart.php',
+		data: {
+			id: itemId
+		},
+		cache: false,
+		success: function(){
+			console.log(data);
+			//$('.cartNum').val(data);
+		}
 	});
 }

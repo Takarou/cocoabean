@@ -7,7 +7,9 @@
 		$select = mysql_query("SELECT level FROM users WHERE username='$username'");
 				
 		while($row = mysql_fetch_array($select)){
-			if($row['level'] !== 2){
+			if($row['level'] == 2){
+				//alloweed//
+			}else{
 				header('location: index.php');
 			}
 		}
