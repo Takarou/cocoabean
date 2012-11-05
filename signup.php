@@ -60,12 +60,20 @@
 				}
 			}
 		?>
+        	<div class="row">
+            <div class="fourcol">
+            </div>
+            <div class="fourcol">
 			<form action="" method="post">
-				<input placeholder="Username" type="text" name="signUpUsername" />	
-				<input placeholder="Password" type="password" name="signUpPassword" />
-				<input placeholder="Re-Password" type="password" name="signUpRepassword" />
+				<input placeholder="Username" type="text" name="signUpUsername" /><br />	
+				<input placeholder="Password" type="password" name="signUpPassword" /><br />
+				<input placeholder="Re-Password" type="password" name="signUpRepassword" /><br />
 				<input type="submit" value="Submit" name="signUpLogin" />
 			</form>
+            </div>
+            <div class="fourcol last">
+            </div>
+            </div>
 		</div>
 	</div>
 

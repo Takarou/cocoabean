@@ -137,6 +137,12 @@ footer {
 	text-align:center;
 }
 
+/* SIGN UP */
+#search .fourcol input{
+	width:15em;
+	margin:5px;
+}
+
 /* HOME */
 
 body#home

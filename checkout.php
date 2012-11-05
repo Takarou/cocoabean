@@ -27,7 +27,9 @@
 	<?php include 'php-includes/header-include.php'; ?>
 	
 		<div class="container">
+        <div class="titlebar">
 		<h2>checkout</h2>
+        </div>
 		
         <div class="row">
 
