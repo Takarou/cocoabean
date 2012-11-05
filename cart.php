@@ -132,7 +132,7 @@
             </div>
             <div class="threecol last">
             	<div class="continue">
-            		<a href="cart.php" />Continue to Checkout</a>
+            		<a href="checkout.php" />Continue to Checkout</a>
                 </div>
             </div>
         </div>                

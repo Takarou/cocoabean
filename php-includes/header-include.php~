@@ -1,12 +1,12 @@
 <?php
 	session_start();
-	require("database.php");
+	include 'database.php';
 	
 	if(!isset($_SESSION['cart'])){
 		$cart = array();
 		$_SESSION['cart'] = $cart;
 	}
-	print_r($_SESSION['cart']);
+	//print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">

@@ -11,6 +11,6 @@ function addToCart(itemId){
 	//console.log(itemId);
 	
 	$.post('addCart.php', {id: itemId}, function(data){
-		location.reload(true);
+		console.log(data);
 	});
 }
