@@ -259,3 +259,65 @@ body#home
 	margin-bottom:.5em;
 	padding:.3em;
 }
+
+/* PRODUCTS PAGE LIGHTBOX & RELATED FORMS */
+
+div.lBox	{
+	/* Parent div of each individual lightbox */
+}
+.lBox h3	{
+	/* Product title in lightbox styles */
+}
+.lBox .price	{
+	/* Product price in lightbox styles */
+}
+.lBox img	{
+	/*Product photo in the lightbox styles */
+}
+.lBox h4	{
+	/* Style the "Reviews" heading in the lightbox */
+}
+.radios li	{
+	list-style-type: none;
+}
+
+.radios li input	{
+	/* Use this to style the rating radio buttons when someone is leaving a review */
+}
+
+/* Review Styles */
+
+.review p	{
+	/* Style review text */
+}
+/* Show rating images in place of numerical rating values
+	This is for things that have a rating, not for someone MAKING a rating */
+.rating-0	{
+
+}
+.rating-1	{
+
+}
+.rating-2	{
+	
+}
+.rating-3	{
+
+}
+.rating-4	{
+
+}
+.rating-5	{
+
+}
+
+/* REVIEW FORM styles */
+
+#review-text	{
+	/* Style the textarea that the user types their review into here */
+}
+
+.review-submit	{
+	/* Review form submit button */
+}
+
