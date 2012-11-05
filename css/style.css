@@ -137,6 +137,18 @@ footer {
 	text-align:center;
 }
 
+/* SIGN UP */
+
+#search .titlebar {
+	margin-bottom:.5em;
+	padding:.3em;
+}
+
+#search .fourcol input{
+	width:25em;
+	margin:5px;
+}
+
 /* HOME */
 
 body#home
@@ -202,6 +214,10 @@ body#home
 
 /* POLICIES */
 
+#policies {
+	background: #ddd;
+}
+
 #policies .row .titlebar 
 {
 	margin-bottom:.5em;
@@ -221,6 +237,11 @@ body#home
 	background: #ddd;
 }
 
+#products .titlebar {
+	margin-bottom:.5em;
+	padding:.3em;
+}
+
 #products .row .threecol .product {
     height:400px;
     position:relative;
@@ -230,8 +251,9 @@ body#home
 }
 
 #products .row .threecol .product .crop {
-
     height:250px;
+	min-height:250px;
+	min-width:250px;
     position:relative;
     overflow:hidden;
 	text-align:center;
@@ -245,6 +267,7 @@ body#home
     top:0;
     left:0; 
 	border-radius:5px;
+	
 	/*vertical-align:middle; */
 }
 
@@ -358,6 +381,11 @@ div.lBox	{
 }
 
 /* CHECKOUT */
+#checkout .titlebar {
+	margin-bottom:.5em;
+	padding:.3em;
+}
+
 #checkout {
 	background: #ddd;
 }
@@ -368,6 +396,8 @@ font-weight: bold;
 
 #checkout fieldset	{
 border: #777 solid 1px;
+padding-top:5px;	
+padding-bottom:5px;
 }
 
 #checkout .container ul	{
@@ -376,6 +406,8 @@ border: #777 solid 1px;
 
 #checkout .container ul input	{
 display: block;
+width:25em;
+margin:5px;
 }
 
 #checkout fieldset.submit	{
@@ -390,6 +422,7 @@ color: #444;
 border: #888 solid 1px;
 background: #dbcca9;
 font-size: 2em;
+
 }
 
 .buy-button{

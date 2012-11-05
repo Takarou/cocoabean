@@ -62,7 +62,11 @@
            </ul>
            <p class="keys">Merchandise sold and shipped by Coca Bean may be returned either to a store or by mail. Most items can be returned within 14 days of receiving it. The chart above lists instructions on how to return your product.<br /> <br />
 Note: Items must be returned in the original manufacturer's packaging, so we recommend you keep your packaging for at least the first 90 days after purchase.</p>
-			<h2>Tax Policy</h2>
+			<div class="row">
+            <div class="titlebar">
+            <h2>Tax Policy</h2>
+            </div>
+            </div>
             <p class="keys">If an item is subject to sales tax in the state to which the order is shipped, tax is generally calculated on the total selling price of each individual item. In accordance with state tax laws, the total selling price of an item will generally include item-level shipping and handling charges, item-level discounts, gift-wrap charges, and an allocation of order-level shipping and handling charges and order-level discounts.<br /> <br />The amount of tax charged on your order will depend upon many factors including Type of item purchased, and destination of the shipment. Factors can change between the time you place an order and the time of credit card charge authorization, which could affect the calculation of sales taxes. The amount appearing on your order as Estimated Tax may differ from the sales taxes ultimately charged.</p>
             	</div>
             </div>
@@ -514,7 +518,13 @@ Note: Items must be returned in the original manufacturer's packaging, so we rec
             </div>
         
             <div class="twelvecol last">   
-                <p class="keys">Security msg goes here</p>
+                <p class="keys">These Security Measures ensure the confidentiality of your information, and are also used to help confirm that the server you are passing information to is the correct server. If any other internet user intercepts the communication they will only be able to see it in an encrypted form.<br />
+
+<br />When you connect to the secure section of the site, such as the checkout page, you ask that server to authenticate itself. This authentication is quite a complex process involving public keys, private keys and a digital certificate. The certificate tells you that an independent third party has agreed that the server belongs to the company it claims to belong to.<br />
+
+<br />Cocoa bean does not recommend the use of older browsers for secure transactions.<br />
+
+<br />All reasonable steps are taken by Cocoa bean to protect a customer's personal information, in particular credit card details supplied by all customers. Cocoa bean has used state-of-the-art encryption technology to secure the personal information of a website user. </p>
             </div>                
         </div>
     </div>
