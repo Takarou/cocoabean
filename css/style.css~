@@ -395,7 +395,3 @@ font-size: 2em;
 .buy-button{
 	cursor: pointer;
 }
-
-.buy-button:hover{
-	color: #74C9DB;
-}
