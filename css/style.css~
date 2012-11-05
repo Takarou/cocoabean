@@ -230,9 +230,8 @@ body#home
 }
 
 #products .row .threecol .product .crop {
+
     height:250px;
-	min-height:250px;
-	min-width:250px;
     position:relative;
     overflow:hidden;
 	text-align:center;
@@ -246,7 +245,6 @@ body#home
     top:0;
     left:0; 
 	border-radius:5px;
-	
 	/*vertical-align:middle; */
 }
 
@@ -396,8 +394,4 @@ font-size: 2em;
 
 .buy-button{
 	cursor: pointer;
-}
-
-.buy-button:hover{
-	color: #74C9DB;
 }

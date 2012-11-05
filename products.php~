@@ -75,7 +75,7 @@
 		                	<a href='#lBox-".$results['id']."' class='item'><div class='crop'><img src='".$results['productImg']."' alt='".$results['productName']."'></img></div></a>
 		                	<h3><a href='#lBox-".$results['id']."' class='item'>".$results['productName']."</a></h3>
 		                	<p>$".$results['price']."</p>
-		                	<span class='buy-button' id='id_".$results['id']."'>Add to Cart</span>
+		                	<a class='buy-button' id='id_".$results['id']."'>Add to Cart</a>
 		                    <p>".$results['sDesc']."</p>
 		                    <p> Rating: <span class='rating-".$results['rating']."'>".$results['rating']."</span></p>
 		                </div><!--/.product-->
