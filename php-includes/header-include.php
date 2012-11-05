@@ -114,7 +114,7 @@
                 <a href="cart.php">In your cart: 3 items</a><br/>			
 			</div>
             <div class="onecol">
-                <a href="cart.php" id="cart-checkout">Checkout</a><br/>
+                <a href="checkout.php" id="cart-checkout">Checkout</a><br/>
             </div>
         </div>
         	

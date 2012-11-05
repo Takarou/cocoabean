@@ -113,6 +113,10 @@ header .cart a#login-signup
 
 /* NAVIGATION */
 
+#search {
+	background: #ddd;
+}
+
 nav li a
 {
 	font-family: "Calibri","Helvetica", sans-serif;
@@ -177,6 +181,10 @@ body#home
 
 /* CONTACT */
 
+#contact {
+	background: #ddd;
+}
+
 #contact .container .people
 {
 	padding:1em;
@@ -209,6 +217,10 @@ body#home
 
 /* PRODUCTS */
 
+#products {
+	background: #ddd;
+}
+
 #products .row .threecol .product img
 {
 	/* trying to resize images so they occupy the same size div, without being stretched weirdly.  */
@@ -225,6 +237,10 @@ body#home
 }
 
 /* CART PRODUCTS */
+
+#cartProducts {
+	background: #ddd;
+}
 
 #cartProducts .stuff .row {
 	background-color:#ebddce;
@@ -321,3 +337,37 @@ div.lBox	{
 	/* Review form submit button */
 }
 
+/* CHECKOUT */
+#checkout {
+	background: #ddd;
+}
+
+#checkout	legend	{
+font-weight: bold;
+}
+
+#checkout fieldset	{
+border: #777 solid 1px;
+}
+
+#checkout .container ul	{
+
+}
+
+#checkout .container ul input	{
+display: block;
+}
+
+#checkout fieldset.submit	{
+border: #ddd solid 0px;
+}
+
+#checkout fieldset.submit input	{
+float:right;
+font-family: "Calibri","Helvetica", sans-serif;
+text-transform: uppercase;
+color: #444;
+border: #888 solid 1px;
+background: #dbcca9;
+font-size: 2em;
+}
