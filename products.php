@@ -56,7 +56,7 @@
 					echo"
 					<div class='threecol'>
 		                <div class='product num-".$results['id']."'>		                	
-		                	<a href='#lBox-".$results['id']."' class='item'><img src='".$results['productImg']."' alt='".$results['productName']."'></img></a>
+		                	<a href='#lBox-".$results['id']."' class='item'><div class='crop'><img src='".$results['productImg']."' alt='".$results['productName']."'></img></div></a>
 		                	<h3><a href='#lBox-".$results['id']."' class='item'>".$results['productName']."</a></h3>
 		                	<p>$".$results['price']."</p>
 		                	<a class='buy-button' id='id_".$results['id']."'>Add to Cart</a>
