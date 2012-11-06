@@ -1,12 +1,12 @@
 <?php
 	session_start();
-	include 'database.php';
+	require("database.php");
 	
 	if(!isset($_SESSION['cart'])){
 		$cart = array();
 		$_SESSION['cart'] = $cart;
 	}
-	//print_r($_SESSION['cart']);
+	print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">
@@ -26,7 +26,7 @@
             <div class="check">
             	<div class="threecol">            	
                     <form method="post" action="search.php" id="searchform"> 
-                        <input type="search" id="searchbox" /> 
+                        <input type="search" id="searchbox" name="searchArea"/> 
                         <input type="submit" id="search" value="Search" />
                     </form>
                 </div>
