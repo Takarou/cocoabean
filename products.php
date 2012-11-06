@@ -90,13 +90,21 @@
 					echo '
 						<div style="display: none;">
 							<div class="lBox" id="lBox-'.$results['id'].'">
-								<h3>'.$results['productName'].'</h3>
-								<p class="price">$'.$results['price'].'</p>
-								<img src="'.$results['productImg'].'" alt="" />
-								<p>'.$results['lDesc'].'</p>
-								<p><a class="buy-button" id="id_'.$results['id'].'">Add to Cart</a></p>
-								
-								<h4>Reviews</h4>';
+							
+							<div class="row">
+								<div class="fourcol">
+									<h3>'.$results['productName'].'</h3>
+									<img src="'.$results['productImg'].'" alt="" />
+								</div>
+								<div class="fourcol">
+									<p>'.$results['lDesc'].'</p><br /><br />
+								</div>
+								<div class="fourcol last">
+								<p class="price">$'.$results['price'].'
+								<a class="buy-button" id="id_'.$results['id'].'">Add to Cart</a></p><br /><br />
+								<h4>Reviews</h4>
+								</div>
+							</div>';
 								
 								// If the rating isn't 0, then we know reviews have been left (minimum rating is 1)
 								if ($results['rating'] != 0)	

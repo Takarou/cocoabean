@@ -242,11 +242,27 @@ body#home
 	padding:.3em;
 }
 
+#products .row .threecol p {
+	padding:.6em;
+}
+
+#products .row .threecol h3 {
+	padding:.3em;
+}
+
+#products h3 {
+	font-weight:bold;
+}
+
+#products a {
+	text-decoration:none;
+	color:#630;
+}
+
 #products .row .threecol .product {
-    height:400px;
+    height:450px;
     position:relative;
     overflow:hidden;
-	background-color:#FFF;
 	text-align:center;
 }
 
@@ -323,6 +339,10 @@ body#home
 
 div.lBox	{
 	/* Parent div of each individual lightbox */
+	overflow:hidden;
+	background-color:#EBDDCE;
+	border:none;
+	vertical-align:baseline;
 }
 .lBox h3	{
 	/* Product title in lightbox styles */
@@ -426,7 +446,11 @@ font-size: 2em;
 }
 
 .buy-button{
+	background: #ddd;
+	border:solid thin #630;
 	cursor: pointer;
+	padding:.1em;
+	margin:1em;
 }
 
 .buy-button:hover{
