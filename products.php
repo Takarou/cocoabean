@@ -56,22 +56,20 @@
 
 				while ($results = mysql_fetch_array($query))
 				{	
-					echo"
-					<div class='threecol'>";
 
-						if ($productCount%4 == 0)
-						{
-							// product is a factor of 4, add class=last
-							echo "<div class='last product num-".$results['id']."'>";
-							
-						}
-						else
-						{
-							// product is not a factor of 4, don't add class=last
-							echo "<div class='product num-".$results['id']."'>";
-						}
+					if ($productCount%4 == 0)
+					{
+						// product is a factor of 4, add class=last
+						echo "<div class='threecol last'>";						
+					}
+					else
+					{
+						// product is not a factor of 4, don't add class=last
+						echo "<div class='threecol'>";
+					}
 
-							echo "	                	
+						echo "	
+						<div class='product num-".$results['id']."'>                	
 		                	<a href='#lBox-".$results['id']."' class='item'><div class='crop'><img src='".$results['productImg']."' alt='".$results['productName']."'></img></div></a>
 		                	<h3><a href='#lBox-".$results['id']."' class='item'>".$results['productName']."</a></h3>
 		                	<p>$".$results['price']."</p>
@@ -79,7 +77,7 @@
 		                    <p>".$results['sDesc']."</p>
 		                    <p> Rating: <span class='rating-".$results['rating']."'>".$results['rating']."</span></p>
 		                </div><!--/.product-->
-	            	</div>
+	            	</div><!--/.threecol-->
 					";
 					
 					// Query database for this product's reviews
