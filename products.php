@@ -104,6 +104,7 @@
 								<a class="buy-button" id="id_'.$results['id'].'">Add to Cart</a></p><br /><br />
 								<h4>Reviews</h4>
 								</div>
+								
 							</div>';
 								
 								// If the rating isn't 0, then we know reviews have been left (minimum rating is 1)
