@@ -13,7 +13,7 @@
 
     	<div class="logo">
             <div class="twocol last">
-                <img src="img/logo.png" alt="logo" />
+                <img src="img/logo.png" alt="logo"></img>
             </div>
         </div>
  
@@ -98,13 +98,13 @@
     <div class="row">
 		<nav>
 			<ul>
-				<div class="onecol"><li><a href="index.php">Home</a></li></div>
-				<div class="onecol"><li><a href="products.php?category=Cake">Cakes</a></li></div>
-				<div class="onecol"><li><a href="products.php?category=Cheesecake">Cheesecake</a></li></div>
-				<div class="onecol"><li><a href="products.php?category=Drinks">Drinks</a></li></div>
-				<div class="onecol"><li><a href="products.php?category=Fruit">Fruit</a></li></div>
-				<div class="onecol"><li><a href="products.php?category=Specialty">Specialty</a></li></div>
-				<div class="onecol"><li><a href="contact.php">Contact</a></li></div>
+				<li class="onecol"><a href="index.php">Home</a></li>
+				<li class="onecol"><a href="products.php?category=Cake">Cakes</a></li>
+				<li class="onecol"><a href="products.php?category=Cheesecake">Cheesecake</a></li>
+				<li class="onecol"><a href="products.php?category=Drinks">Drinks</a></li>
+				<li class="onecol"><a href="products.php?category=Fruit">Fruit</a></li>
+				<li class="onecol"><a href="products.php?category=Specialty">Specialty</a></li>
+				<li class="onecol"><a href="contact.php">Contact</a></li>
 	        </ul>	
 		</nav>
  
@@ -119,7 +119,7 @@
         </div>
         	
         <div class="onecol last">
-			<img src="img/cart.png" alt="cart" />
+			<img src="img/cart.png" alt="cart"></img>
 		</div>
     
 	    <div class="row">

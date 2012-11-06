@@ -60,5 +60,5 @@
 
 	<?php include 'php-includes/footer-include.php'; ?>
 	
-	</body>
+</body>
 </html>
