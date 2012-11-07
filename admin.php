@@ -1,6 +1,3 @@
-<?php
-	//require ('database.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,10 +35,12 @@
 					$temp = mysql_fetch_array($userLevel);
 					print_r($temp['level']);
 					if(!$temp['level'] >= 2){
-						echo 'not admin';
+						header('location: index.php');
 					}else{
-						echo 'is admin';
+						header('location: crud.php');
 					}
+				}else{
+					header('location: index.php');
 				}
 			?>
         </form>
