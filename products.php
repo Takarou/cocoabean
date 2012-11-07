@@ -101,7 +101,7 @@
 									<p>'.$results['lDesc'].'</p><br /><br />
 									<p class="price">$'.$results['price'].'
 									<a class="buy-button" id="id_'.$results['id'].'">Add to Cart</a></p><br /><br />
-									<h4>Reviews</h4>
+									<h4>Submit Review</h4>
 									';
 									if (isset($_SESSION['user']))	{
 	
@@ -121,22 +121,29 @@
 									if ($reviewed == 0)	{
 									
 										echo '
-										
+										<div class="row">
+
 										<form action="" method="post" id="review-form">
 											<input type="text" id="productID" value="'.$results['id'].'" name="productID" style="display: none" />
 											<input type="text" id="theuser" value="'.$_SESSION['user'].'" name="theuser" style="display: none;" />
-												<ul class="radios" id="radios>
-												<li><input type="radio" name="rating" id="rating" value="2" /></li>
-													<li><input type="radio" name="rating" id="rating" value="1" /><img src="img/rating/norating.png" alt="no rating" ></li>
-													<li><input type="radio" name="rating" id="rating" value="2" /><img src="img/rating/norating.png" alt="no rating" ></li>
-													<li><input type="radio" name="rating" id="rating" value="3" /><img src="img/rating/norating.png" alt="no rating" ></li>
-													<li><input type="radio" name="rating" id="rating" value="4" /><img src="img/rating/norating.png" alt="no rating" ></li>
-													<li><input type="radio" name="rating" id="rating" value="5" /><img src="img/rating/norating.png" alt="no rating" ></li>
-												</ul>
-											<textarea maxlength="255" placeholder="Write a review." name="review-text" id="review-text"></textarea>
+														
+														<img class="rating" src="img/rating/norating.png" alt="no rating" ></img>
+														<img class="rating" src="img/rating/norating.png" alt="no rating" ></img>
+														<img class="rating" src="img/rating/norating.png" alt="no rating" ></img>
+														<img class="rating" src="img/rating/norating.png" alt="no rating" ></img>
+														<img class="rating" src="img/rating/norating.png" alt="no rating" ></img><br />
+										
+														<input type="radio" name="rating" id="rating" value="1" />
+														<input type="radio" name="rating" id="rating" value="2" />
+														<input type="radio" name="rating" id="rating" value="3" />
+														<input type="radio" name="rating" id="rating" value="4" />
+														<input type="radio" name="rating" id="rating" value="5" /><br />
+														
+												<textarea maxlength="255" placeholder="Write a review." name="review-text" id="review-text"></textarea>
 											
 											<input class="review-submit" id="rev-submit submit-'.$results['id'].'" type="submit" value="Submit" name="leave-review" />
-										</form>';
+										</form>
+										</div>';
 									}
 									
 									else	{
