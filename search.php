@@ -34,22 +34,14 @@
 
 	<div class="content">
 		<div class="container">
-			<?php
+            
+            <?php 
+
+		        $productCount = 1;
 				$searchTerm = $_POST['searchArea'];
 				
 				$return = array();
 				$query = mysql_query("SELECT * FROM product WHERE productName LIKE '%$searchTerm%'")or die($query."<br/><br/>".mysql_error());
-				while($row = mysql_fetch_array($query))
-					echo $row['productName'].'<br />';
-			?>
-            
-            <?php /*
-		        // get category clicked to get here.
-		        $selectedCategory = $_GET["category"];			
-		        $productCount = 1;
-
-		        // select products of selected category from database.				
-				$query = mysql_query("SELECT * FROM product WHERE category='$selectedCategory'") or die(mysql_error());				
 																														
 				// While there are more results in the result set, loop through them and get select info out.
 				// every four products, add class=last				
@@ -128,7 +120,7 @@
 
 					$productCount++;
 
-				}	*/			
+				}	
 		    ?>    
 		</div>
 	</div>

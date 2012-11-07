@@ -127,8 +127,8 @@
         <div class="grouppreview">
             <div class="row people">
                 <div class="threecol">
-                    <h3>Sherry McReally Long Last Name That Juan Cant Remember</h3><br />
-                    <p>Bio: <br /><br /> Stuff and things </p>
+                    <h3>Sherry Bauerschmidt Hofmeister</h3><br />
+                    <p>Bio: <br /><br /> Focuses primarilly on aspects of the web as they relate to accessibility.</p>
                 </div>
                 
                 <div class="threecol">
@@ -138,9 +138,9 @@
                 <div class="threecol">
                     <ul>
                         <li><h3> List of Responsibilities</h3></li><br />
-                        <li>Some of this</li>
-                        <li>Some of that</li>
-                        <li></li>
+                        <li>Initial Storefront design</li>
+                        <li>Reviews</li>
+                        <li>Product Lightboxes</li>
                     </ul>                                
                 </div>
                 
