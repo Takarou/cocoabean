@@ -6,13 +6,14 @@
 	$item = array(
 		'name' => '',
 		'qty' => 1,
+		'img' => '',
 		'price' => ''
 	);
 	$testQuery = mysql_query("SELECT * FROM product WHERE id='$testId'");
 	while($results = mysql_fetch_array($testQuery)){
 		if(array_key_exists($results['id'], $_SESSION['cart'])){
 			$_SESSION['cart'][$results['id']]['qty'] += 1;
-			$_SESSION['cart'][$results['id']]['price'] = $results['price'] * $item['qty'];
+			$_SESSION['cart'][$results['id']]['price'] = $results['price'] * $_SESSION['cart'][$results['id']]['qty'];
 		}else{
 			$item['name'] = $results['productName'];
 			$item['price'] = $results['price'];

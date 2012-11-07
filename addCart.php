@@ -6,6 +6,7 @@
 	$item = array(
 		'name' => '',
 		'qty' => 1,
+		'img' => '',
 		'price' => ''
 	);
 	$testQuery = mysql_query("SELECT * FROM product WHERE id='$testId'");
@@ -16,6 +17,7 @@
 		}else{
 			$item['name'] = $results['productName'];
 			$item['price'] = $results['price'];
+			$item['img'] = $result['productImg'];
 		
 			$_SESSION['cart'][$results['id']] = $item;
 		}
