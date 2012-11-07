@@ -56,35 +56,29 @@
 
                         <div class='onecol'>
                             <div class='product'>
-                                <p>$count</p>
-                            </div>
-                        </div>
-
-                        <div class='twocol'>
-                            <div class='product'>
-                                <p>THUMBNAIL</p>
-                            </div>
-                        </div>  
-
-                        <div class='twocol'>
-                            <div class='product'>
                                 <p>".$key['name']."</p>
                             </div>
-                        </div>  
-
-                        <div class='twocol'>
-                            <div class='product'>
-                                <p>SHORT DESC</p>
-                            </div>
                         </div>
 
                         <div class='twocol'>
                             <div class='product'>
-                                <p>PRICE</p>
+                                <img class='cart-product-image' src='".$key['img']."' alt=''></img>                                
                             </div>
                         </div>  
 
-                        <div class='onecol last'></div>     
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>Qty: ".$key['qty']."</p>
+                            </div>
+                        </div>                          
+
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>Price: $".$key['price']."</p>
+                            </div>
+                        </div>  
+
+                        <div class='threecol last'></div>     
                             
                     </div><!--/.row-->";
                     $count++;
