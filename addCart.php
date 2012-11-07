@@ -17,7 +17,7 @@
 		}else{
 			$item['name'] = $results['productName'];
 			$item['price'] = $results['price'];
-			$item['img'] = $result['productImg'];
+			$item['img'] = $results['productImg'];
 		
 			$_SESSION['cart'][$results['id']] = $item;
 		}

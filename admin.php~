@@ -37,8 +37,10 @@
 					$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
 					$temp = mysql_fetch_array($userLevel);
 					print_r($temp['level']);
-					if($temp['level'] != 2){
+					if($temp['level'] !>= 2){
 						echo 'not admin';
+					}else{
+						echo 'is admin';
 					}
 				}
 			?>
