@@ -9,22 +9,17 @@
 			$newCount = mysql_num_rows($cartQuery);
 			if($newCount == 1){
 				$newCart = mysql_fetch_array($cartQuery);
-				$json = $newCart[0];
-				$userCart = json_decode($json, true);
-				$_SESSION['cart'] = $userCart;
+				if(!empty($newCart)){
+					$json = $newCart[0];
+					$userCart = json_decode($json, true);
+					$_SESSION['cart'] = $userCart;
+				}
 			}
-		}else{
-			$cart = array();
-			$_SESSION['cart'] = $cart;
 		}
-	}
-	print_r($_SESSION['cart']);
-	
-	/*if(!isset($_SESSION['cart'])){
 		$cart = array();
 		$_SESSION['cart'] = $cart;
 	}
-	print_r($_SESSION['cart']);*/
+	print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">
@@ -80,7 +75,16 @@
 								if($count == 1)
 								{
 									$_SESSION['user'] = $username;
+									$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
+									
+									if ($userLevel == 2) 
+									{
+										header('location: admin.php');	
+									} 
+									else 
+									{		
 									header('location: index.php');
+									}
 								}
 								else
 								{

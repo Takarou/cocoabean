@@ -9,16 +9,17 @@
 			$newCount = mysql_num_rows($cartQuery);
 			if($newCount == 1){
 				$newCart = mysql_fetch_array($cartQuery);
-				$json = $newCart[0];
-				$userCart = json_decode($json, true);
-				$_SESSION['cart'] = $userCart;
+				if(!empty($newCart)){
+					$json = $newCart[0];
+					$userCart = json_decode($json, true);
+					$_SESSION['cart'] = $userCart;
+				}
 			}
-		}else{
-			$cart = array();
-			$_SESSION['cart'] = $cart;
 		}
+		$cart = array();
+		$_SESSION['cart'] = $cart;
 	}
-	print_r($_SESSION['cart']);
+	//print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">

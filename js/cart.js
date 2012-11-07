@@ -6,6 +6,7 @@ $(window).load(function(){
 });
 
 function addToCart(itemId){
+	var i = 0;
 	itemId = itemId.replace('id_', '');
 	itemId = parseInt(itemId);
 	//console.log(itemId);
@@ -26,7 +27,9 @@ function addToCart(itemId){
 		success: function(data){
 			//console.log(data);
 			for(var item in data){
+				i++;
 				console.log(data[item].name);
+				$('.cartNum').text('Your cart has: '+i+' items in it.');
 			}
 		}
 	});
