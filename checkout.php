@@ -30,13 +30,13 @@
         
         <div class="row">
             <div class="titlebar">
-            	<h2>checkout</h2>
+            	<h2>Checkout</h2>
             </div>
         </div>
 		
         <div class="row">
 
-                <form method="post" action="#" id="payment">
+                <form method="post" action="confirm.php" id="payment">
                 
               	<div class="fourcol">
                     <fieldset>
@@ -48,7 +48,7 @@
                             <li>Street Address: 
                             <input type="text" name="b_staddress" /></li>
                             
-                            <li>City: 
+                            <li>City:
                             <input type="text" name="b_city" /></li>
                             
                             <li>State: 
