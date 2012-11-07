@@ -29,7 +29,7 @@
 
         <?php 
             $cartContents = $_SESSION['cart'];
-            print_r($cartContents);
+            // print_r($cartContents);
 
             $sizeOfCart = count($cartContents);
          ?>
@@ -45,55 +45,60 @@
         <div class="cartContents">
 
             <?php 
-                for ($count=1; $count < $sizeOfCart+1; $count++)
-                {
-                    echo"
-                        <div class='row'>
-                            <div class='twocol'></div>
+            $count = 1;
 
-                            <div class='onecol'>
-                                <div class='product'>
-                                    <p>$count</p>
-                                </div>
+                foreach ($cartContents as $key) 
+                {                    
+                
+                echo"
+                    <div class='row'>
+                        <div class='twocol'></div>
+
+                        <div class='onecol'>
+                            <div class='product'>
+                                <p>$count</p>
                             </div>
+                        </div>
 
-                            <div class='twocol'>
-                                <div class='product'>
-                                    <p>THUMBNAIL</p>
-                                </div>
-                            </div>  
-
-                            <div class='twocol'>
-                                <div class='product'>
-                                    <p'product'NAME</p>
-                                </div>
-                            </div>  
-
-                            <div class='twocol'>
-                                <div class='product'>
-                                    <p>SHORT DESC</p>
-                                </div>
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>THUMBNAIL</p>
                             </div>
+                        </div>  
 
-                            <div class='twocol'>
-                                <div class='product'>
-                                    <p>PRICE</p>
-                                </div>
-                            </div>  
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>".$key['name']."</p>
+                            </div>
+                        </div>  
 
-                            <div class='onecol last'>
-                                <div class='product'>
-                                    <p>HOLDER</p>
-                                </div>
-                            </div>     
-                                
-                        </div><!--/.row-->";
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>SHORT DESC</p>
+                            </div>
+                        </div>
+
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>PRICE</p>
+                            </div>
+                        </div>  
+
+                        <div class='onecol last'></div>     
+                            
+                    </div><!--/.row-->";
+                    $count++;
                 }
+
 
              ?>    
         
         </div><!--/.cartContents-->	   
         
+        <div class="row">
+            <div class="coltwelve"></div>
+        </div>
+
         <div class="row">
         	<div class="total">
             	<div class="sevencol">
@@ -108,8 +113,7 @@
         </div>
    
 		<div class="row">
-        	<div class="ninecol">
-            </div>
+        	<div class="ninecol"></div>            
             <div class="threecol last">
             	<div class="continue">
             		<a href="checkout.php">Continue to Checkout</a>
