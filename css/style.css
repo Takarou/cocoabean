@@ -285,6 +285,15 @@ body#home
 	height: 230px;		
 }
 
+
+#products .row .rating {
+	width:1.3em;
+}
+
+#products .row #rating {
+	padding:3em;
+}
+
 /* mobile */
 @media(max-width: 770px){
 	#products .row .threecol .product .crop img 
@@ -369,11 +378,12 @@ div.lBox	{
 	/* Style the "Reviews" heading in the lightbox */
 }
 .radios li	{
-	list-style-type: none;
+
 }
 
 .radios li input	{
 	/* Use this to style the rating radio buttons when someone is leaving a review */
+	padding:1em;
 }
 
 /* Review Styles */
