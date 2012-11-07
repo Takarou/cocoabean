@@ -19,7 +19,8 @@
 		$cart = array();
 		$_SESSION['cart'] = $cart;
 	}
-	//print_r($_SESSION['cart']);
+
+	print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">
@@ -131,7 +132,7 @@
         <div id="cart-contents">
         	<div class="onecol"></div> 			
 	    	<div class="twocol">
-                <a href="cart.php"><?php echo '<span class="cartNum">Your cart has: '.count($_SESSION['cart']).' items in it.</span>'; ?></a><br/>			
+                <a href="cart.php" class="cartNum"><?php echo 'Your cart has: '.count($_SESSION['cart']).' items in it.'; ?></a><br/>			
 			</div>
             <div class="onecol">
                 <a href="checkout.php" id="cart-checkout">Checkout</a><br/>

@@ -312,24 +312,22 @@ body#home
 	/*height:15em;*/
 }
 
-#products .row .sixcol li {
-}
-
-
 /* CART PRODUCTS */
 
 #cartProducts {
 	background: #ddd;
 }
 
-#cartProducts .stuff .row {
-	background-color:#ebddce;
-	border:2px solid #804000;
-	border-radius:6px;
+#cartProducts .cartContents .row 
+{
+	/*background-color:#ebddce;*/
+	/*border:2px solid #804000;*/
+	/*border-radius:6px;*/
+	border-bottom: 1px solid #804000;
 }
 
-#cartProducts .stuff .row .product {
-	padding:.5em;
+#cartProducts .cartContents .row .product {
+	/*padding:.5em;*/
 }
 
 #cartProducts .row .total {
