@@ -348,6 +348,8 @@ body#home
 #cartProducts .row .continue a{
 	color:#000;
 	padding:2em;
+	font-size: 0.85em;
+	white-space: nowrap;	
 	text-decoration:none;
 }
 
