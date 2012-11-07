@@ -62,7 +62,16 @@
 								if($count == 1)
 								{
 									$_SESSION['user'] = $username;
+									$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
+									
+									if ($userLevel == 2) 
+									{
+										header('location: admin.php');	
+									} 
+									else 
+									{		
 									header('location: index.php');
+									}
 								}
 								else
 								{

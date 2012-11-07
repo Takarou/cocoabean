@@ -8,7 +8,7 @@
 				
 		while($row = mysql_fetch_array($select)){
 			if($row['level'] !== 2){
-				header('location: index.php');
+				//header('location: index.php');
 			}
 		}
 	}

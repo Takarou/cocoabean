@@ -52,7 +52,7 @@
                         <li><h3> List of Responsibilities</h3></li><br />
                         <li>Business Policies</li>
                         <li>Use Cases</li>
-                        <li>Other things</li>
+                        <li>Front End Development</li>
                     </ul>                                
                 </div>
                 
