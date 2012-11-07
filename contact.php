@@ -132,7 +132,7 @@
                 </div>
                 
                 <div class="threecol">
-                    <img class="grouppic" src="" alt="picture of Sherry" />
+                    <img class="grouppic" src="img/grouppics/Sherry.jpg" alt="picture of Sherry" />
                 </div>
                 
                 <div class="threecol">

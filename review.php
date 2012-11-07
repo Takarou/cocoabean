@@ -3,6 +3,7 @@
 // Blame Sherry if this is super cray cray.
 			
 	// Check if user is !logged in
+	session_start();
 	if (isset($_SESSION['user']))	{
 	
 		$theuser = $_SESSION['user'];
@@ -16,6 +17,7 @@
 		if ($reviewed == 0)	{
 		
 			echo '
+			
 			<form action="" method="post" id="review-form">
 				<input type="text" id="productID" value="'.$results['id'].'" name="productID" style="display: none" />
 				<input type="text" id="theuser" value="'.$_SESSION['user'].'" name="theuser" style="display: none;" />
