@@ -295,6 +295,10 @@ body#home
 	/*height:15em;*/
 }
 
+#products .row .sixcol li {
+}
+
+
 /* CART PRODUCTS */
 
 #cartProducts {
@@ -456,3 +460,29 @@ font-size: 2em;
 .buy-button:hover{
 	color: #74C9DB;
 }
+
+/* CONFIRM */
+#confirm .titlebar {
+	margin-bottom:.5em;
+	padding:.3em;
+}
+
+#confirm {
+	background: #ddd;
+}
+
+#confirm tr {
+	padding:.3em;
+}
+
+#confirm td {
+	padding:.3em;
+	padding-left:1em;
+	padding-right:1em;
+}
+
+#confirm h3 {
+	font-size:1.5em;
+	padding-bottom:.5em;
+}
+
