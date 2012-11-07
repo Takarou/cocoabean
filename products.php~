@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +32,7 @@
 <body id="products">
 	
 	<?php include 'php-includes/header-include.php'; ?>
+ 
 	
     <div class="container">
 
@@ -56,30 +59,28 @@
 
 				while ($results = mysql_fetch_array($query))
 				{	
-					echo"
-					<div class='threecol'>";
 
-						if ($productCount%4 == 0)
-						{
-							// product is a factor of 4, add class=last
-							echo "<div class='last product num-".$results['id']."'>";
-							
-						}
-						else
-						{
-							// product is not a factor of 4, don't add class=last
-							echo "<div class='product num-".$results['id']."'>";
-						}
+					if ($productCount%4 == 0)
+					{
+						// product is a factor of 4, add class=last
+						echo "<div class='threecol last'>";						
+					}
+					else
+					{
+						// product is not a factor of 4, don't add class=last
+						echo "<div class='threecol'>";
+					}
 
-							echo "	                	
+						echo "	
+						<div class='product num-".$results['id']."'>                	
 		                	<a href='#lBox-".$results['id']."' class='item'><div class='crop'><img src='".$results['productImg']."' alt='".$results['productName']."'></img></div></a>
 		                	<h3><a href='#lBox-".$results['id']."' class='item'>".$results['productName']."</a></h3>
 		                	<p>$".$results['price']."</p>
-		                	<a class='buy-button' id='id_".$results['id']."'>Add to Cart</a>
+		                	<span class='buy-button' id='id_".$results['id']."'>Add to Cart</span>
 		                    <p>".$results['sDesc']."</p>
 		                    <p> Rating: <span class='rating-".$results['rating']."'>".$results['rating']."</span></p>
 		                </div><!--/.product-->
-	            	</div>
+	            	</div><!--/.threecol-->
 					";
 					
 					// Query database for this product's reviews
@@ -90,45 +91,132 @@
 					echo '
 						<div style="display: none;">
 							<div class="lBox" id="lBox-'.$results['id'].'">
-								<h3>'.$results['productName'].'</h3>
-								<p class="price">$'.$results['price'].'</p>
-								<img src="'.$results['productImg'].'" alt="" />
-								<p>'.$results['lDesc'].'</p>
-								<p><a class="buy-button" id="id_'.$results['id'].'">Add to Cart</a></p>
-								
-								<h4>Reviews</h4>';
-								
-								// If the rating isn't 0, then we know reviews have been left (minimum rating is 1)
-								if ($results['rating'] != 0)	
-								{
-									while($reviews = mysql_fetch_array($searchReviews))	
-									{
-										
-										echo '
-											<div class="review">
-												<p class="rating-'.$reviews['rating'].'">'.$reviews['rating'].'</p>
-												<p>'.$reviews['reviewtext'].'</p>
-												<p>by '.$reviews['user_id'].'</p>
-											</div>
-										';
+							
+							<div class="row">
+								<div class="fourcol">
+									<h3>'.$results['productName'].'</h3>
+									<img src="'.$results['productImg'].'" alt="" />
+								</div>
+								<div class="sixcol last">
+									<p>'.$results['lDesc'].'</p><br /><br />
+									<p class="price">$'.$results['price'].'
+									<a class="buy-button" id="id_'.$results['id'].'">Add to Cart</a></p><br /><br />
+									<h4>Reviews</h4>
+									';
+									if (isset($_SESSION['user']))	{
+	
+									// Review Form loaded into product lightboxes for logged in users.
+									// Blame Sherry if this is super cray cray.
+							
+									// Check if user is !logged in
 									
-									} //end while
-								} //end if
+									$theuser = $_SESSION['user'];
+									$productID = $results['id'];
 								
-								// If there are no reviews for this product:
-								else	
-								{
-									echo '<p>Be the first to review this product.</p>';
+									// Check if this user has already reviewed this product
+									$reviewQuery = mysql_query("SELECT id FROM reviews WHERE user_id='$theuser' AND prod_id = '$productID'");
+									$reviewed = mysql_num_rows($reviewQuery);
+									
+									// Otherwise, they're logged in and haven't reviewed, so show them the form:
+									if ($reviewed == 0)	{
+									
+										echo '
+										
+										<form action="" method="post" id="review-form">
+											<input type="text" id="productID" value="'.$results['id'].'" name="productID" style="display: none" />
+											<input type="text" id="theuser" value="'.$_SESSION['user'].'" name="theuser" style="display: none;" />
+												<ul class="radios" id="radios>
+												<li><input type="radio" name="rating" id="rating" value="2" /></li>
+													<li><input type="radio" name="rating" id="rating" value="1" /><img src="img/rating/norating.png" alt="no rating" ></li>
+													<li><input type="radio" name="rating" id="rating" value="2" /><img src="img/rating/norating.png" alt="no rating" ></li>
+													<li><input type="radio" name="rating" id="rating" value="3" /><img src="img/rating/norating.png" alt="no rating" ></li>
+													<li><input type="radio" name="rating" id="rating" value="4" /><img src="img/rating/norating.png" alt="no rating" ></li>
+													<li><input type="radio" name="rating" id="rating" value="5" /><img src="img/rating/norating.png" alt="no rating" ></li>
+												</ul>
+											<textarea maxlength="255" placeholder="Write a review." name="review-text" id="review-text"></textarea>
+											
+											<input class="review-submit" id="rev-submit submit-'.$results['id'].'" type="submit" value="Submit" name="leave-review" />
+										</form>';
+									}
+									
+									else	{
+										echo '<p>You have already reviewed this item.</p>';
+									}
 								}
 								
-								include 'review.php';
+								else {
+									echo '<p>Log in to leave a review.</p>';
+								}
 								
-				echo '		</div><!--/.lBox-->
-						</div>';
+								
+								// Submit form
+								if (isset($_SESSION['user']) && isset($_POST['rev-submit']))	{
+									// Check if fields are empty
+									if (!(empty($_POST['productID'])) && !(empty($_POST['theuser'])) && !(empty($_POST['radios'])))	{
+										$productID = $_POST['productID'];
+										$productID = stripslashes($productID);
+										$productID = mysql_real_escape_string($productID);
+										
+										$theuser = $_POST['theuser'];
+										$theuser = stripslashes($theuser);
+										$theuser = mysql_real_escape_string($theuser);
+										
+										$reviewText = $_POST['review-text'];
+										$reviewText = stripslashes($reviewText);
+										$reviewText = mysql_real_escape_string($reviewText);
+										
+										$therating = $_POST['radios'];
+										$therating = stripslashes($therating);
+										$therating = mysql_real_escape_string($therating);
+										
+										// Make sure no funny business is going on with the rating.
+										if ($therating < 0 && $therating > 5)	{
+											echo '<p>Error.</p>';
+										}
+										// Otherwise, we're good!
+										else	{
+										
+										}
+										
+									}
+									else	{
+										echo '<p>You left some fields blank.</p>';
+									}
+								}
+														
+											echo '		</div><!--/.lBox-->
+													</div>';
+							
+												$productCount++;
+															echo '</div>
+															
+														</div>';
+															
+															// If the rating isn't 0, then we know reviews have been left (minimum rating is 1)
+															if ($results['rating'] != 0)	
+															{
+																while($reviews = mysql_fetch_array($searchReviews))	
+																{
+																	
+																	echo '
+																		<div class="review">
+																			<p class="rating-'.$reviews['rating'].'">'.$reviews['rating'].'</p>
+																			<p>'.$reviews['reviewtext'].'</p>
+																			<p>by '.$reviews['user_id'].'</p>
+																		</div>
+																	';
+																
+																} //end while
+															} //end if
+															
+															// If there are no reviews for this product:
+															else if ($results['rating'] == null)
+															{
+																echo '<p>Be the first to review this product.</p>';
+															}
+															
 
-					$productCount++;
-
-				}				
+												}				
 		    ?>    
            
         </div><!--/.row-->	   

@@ -11,7 +11,8 @@ function addToCart(itemId){
 	//console.log(itemId);
 	
 	/*$.post('addCart.php', {id: itemId}, function(data){
-		location.reload(true);
+		console.log(data);
+		//location.reload(true);
 	});*/
 	
 	$.ajax({
@@ -21,9 +22,12 @@ function addToCart(itemId){
 			id: itemId
 		},
 		cache: false,
-		success: function(){
-			console.log(data);
-			//$('.cartNum').val(data);
+		dataType: 'json',
+		success: function(data){
+			//console.log(data);
+			for(var item in data){
+				console.log(item);
+			}
 		}
 	});
 }

@@ -2,11 +2,23 @@
 	session_start();
 	require("database.php");
 	
-	if(!isset($_SESSION['cart'])){
-		$cart = array();
-		$_SESSION['cart'] = $cart;
+	if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])){
+		if(isset($_SESSION['user'])){
+			$username = $_SESSION['user'];
+			$cartQuery = mysql_query("SELECT cart FROM users WHERE username='$username'");
+			$newCount = mysql_num_rows($cartQuery);
+			if($newCount == 1){
+				$newCart = mysql_fetch_array($cartQuery);
+				$json = $newCart[0];
+				$userCart = json_decode($json, true);
+				$_SESSION['cart'] = $userCart;
+			}
+		}else{
+			$cart = array();
+			$_SESSION['cart'] = $cart;
+		}
 	}
-	// print_r($_SESSION['cart']);
+	print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">
