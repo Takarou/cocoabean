@@ -113,10 +113,6 @@ header .cart a#login-signup
 
 /* NAVIGATION */
 
-#search {
-	background: #ddd;
-}
-
 nav li a
 {
 	font-family: "Calibri","Helvetica", sans-serif;
@@ -147,6 +143,60 @@ footer {
 #search .fourcol input{
 	width:25em;
 	margin:5px;
+}
+
+/* SEARCH */
+
+#search {
+	background: #ddd;
+}
+
+#search .titlebar {
+	margin-bottom:.5em;
+	padding:.3em;
+}
+
+#search .row .threecol p {
+	padding:.6em;
+}
+
+#search .row .threecol h3 {
+	padding:.3em;
+}
+
+#search h3 {
+	font-weight:bold;
+}
+
+#search a {
+	text-decoration:none;
+	color:#630;
+}
+
+#search .row .threecol .product {
+    height:450px;
+    position:relative;
+    overflow:hidden;
+	text-align:center;
+}
+
+#search .row .threecol .product .crop {
+    height:250px;
+	min-height:250px;
+	min-width:250px;
+    position:relative;
+    overflow:hidden;
+	text-align:center;
+}
+
+#search .row .threecol .product .crop img 
+{	
+	display:block;    
+	border-radius:5px;
+
+	/* trying to resize images so they occupy the same size div, without being stretched weirdly.  */	
+	width: 100%;
+	height: 230px;		
 }
 
 /* HOME */
