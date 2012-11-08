@@ -68,11 +68,39 @@
 			if ($therating < 0 && $therating > 5)	{
 				echo '<p>Error.</p>';
 			}
-			// Otherwise, we're good!
+			// Otherwise, we're good!  Add this to the DB~
 			else	{
 			
-			}
-			
+				$addReview = "INSERT INTO reviews (prod_id, user_id, review_text, rating) VALUES ('".$productID."','".$theuser."','".$reviewText."','".$therating."')";
+				$addQuery = mysql_query($addReview) or die(mysql_error());
+				
+				// And calculate the new overall rating for that product!
+				
+				if ($results['rating'] == 0)	{
+					$updateRating = "UPDATE products SET rating='$therating' WHERE id='$productID'";
+					$addUpdatedRating = mysql_query($updateRating) or die(mysql_error());
+				}
+				else	{
+					$getReviews = "SELECT * FROM reviews WHERE prod_id='$productID'";
+					$getReviewsQuery = mysql_query($getReviews) or die(mysql_error());
+					
+					$r_count = 1; // number of reviews
+					$currr = 0; // total score
+					
+					// Figure out what the rating should be, giving each rating equal weight.
+					while($theReview = mysql_fetch_array($getReviewsQuery))	{
+						$r_count++;
+						$currr += $theReview['rating'];
+					}
+					
+					$currr = ($therating + $currr)/$r_count; //get final overall rating
+					$updateRating = "UPDATE products SET rating='$currr' WHERE id='$productID'";
+					$getReviewsQuery = mysql_query($getReviews) or die(mysql_error());
+				}
+				
+				echo "<p>Thank you for your review.</p>";
+				
+			}	
 		}
 		else	{
 			echo '<p>You left some fields blank.</p>';
