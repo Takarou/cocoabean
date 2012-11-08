@@ -17,6 +17,8 @@
 		@import url("css/style.css") screen;
 	</style>
 		
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>    
 	<script type="text/javascript" src="js/google-analytics.js"></script>
@@ -29,7 +31,6 @@
 
         <?php 
             $cartContents = $_SESSION['cart'];
-            // print_r($cartContents);
 
             $sizeOfCart = count($cartContents);
          ?>

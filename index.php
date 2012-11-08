@@ -3,7 +3,8 @@
 <head>
 	<title>CocoaBean Home</title>
 	<meta charset='utf-8'>     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
 	<!--[if lte IE 9]>
 		<style type="text/css">			
@@ -15,12 +16,23 @@
 		@import url("css/reset.css") screen;
 		@import url("css/1140.css") screen;
 		@import url("css/style.css") screen;
+        @import url("css/responsiveslides.css") screen;
+        @import url("css/demo.css") screen;
 	</style>
-		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
     
 	<script type="text/javascript" src="js/google-analytics.js"></script>
+
+    <!--JS for img slider-->
+    <script type="text/javascript" src="js/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="js/responsiveimgslide.js"></script>
+
+
+
+  
 </head>
 <body id="home">
 	
@@ -30,12 +42,30 @@
             <div class="row">
                 <div class="twelvecol last">
                     <div class="titlebar">
-                        <h2><a href="item.php?id=2">Chocolate Chip Cookie Dough Cheesecake</a><br /><span class="price">Now Only $34.99!</span></h2>
+                        <h2><span class="price">Featured Hot Item</span></h2>
                     </div>
-                    <div class="featured">
-                        <img src="img/products/cheesecake002.jpg" alt="" />
-
+                    <!--Image Slider-->
+                    <div class="callbacks_container">
+                      <ul class="rslides" id="slider3">
+                        <li>
+                            <img src="img/featured/drink1.jpg" alt="" />
+                            <p class="caption">Delicious Pumpkin Chocolate Latte.</p>
+                        </li>
+                        <li>
+                            <img src="img/featured/cupcake.jpg" alt="" />
+                            <p class="caption">Chocoholic Cupcakes</p>
+                        </li>
+                        <li>
+                          <img src="img/featured/cheesecake003.jpg" alt="" />
+                          <p class="caption">Chocolate Molten Lava Cheesecake</p>
+                        </li>
+                        <li>
+                          <img src="img/featured/cake2.jpg" alt="" />
+                          <p class="caption">Mini White Chocolate Tuxedo Cheesecakes</p>
+                        </li>
+                      </ul>
                     </div>
+                    <!--End image slider-->
                 </div>		
             </div>
             
