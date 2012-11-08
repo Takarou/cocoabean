@@ -4,6 +4,16 @@ $(window).load(function(){
 		addToCart(itemId);
 	});
 
+	$('.cart-remove-button').bind('click', function(){
+		var itemToRemoveId = $(this).attr('id');		
+		removeFromCart(itemToRemoveId);
+	});
+
+	// $('.cart-remove-button').bind('click'), function(){
+	// 	var itemToRemoveId = $(this).attr('id');
+	// 	console.log("removing item from cart.");
+	// 	removeFromCart(itemToRemoveId);
+	// });
 
 });
 
@@ -38,10 +48,11 @@ function addToCart(itemId){
 }
 
 function removeFromCart(itemId){
+	console.log("removing from cart.");
 	var i = 0;
 	itemId = itemId.replace('id_', '');
 	itemId = parseInt(itemId);
-	//console.log(itemId);	
+	console.log("item id: "+itemId);	
 	
 	$.ajax({
 		type: 'POST',

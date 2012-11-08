@@ -29,14 +29,14 @@
 </head>
 <body id="products">
 	
-	<?php include 'php-includes/header-include.php'; ?>
+	<?php include 'php-includes/header-include.php';?>
  	
     <div class="container">
 
     	<div class="row">
             <div class="twelvecol last"> 
                 <div class="titlebar">
-                    <h2> Products </h2>
+                    <h2>Products</h2>
                 </div>
             </div>
         </div>

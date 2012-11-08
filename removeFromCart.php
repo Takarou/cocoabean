@@ -1,4 +1,8 @@
 <?php
+	// need to remove from cart session 
+	// re-save to session
+	// remove from db
+
 	session_start();
 	include 'database.php';
 	
@@ -7,9 +11,15 @@
 		'name' => '',
 		'qty' => 1,
 		'img' => '',
+		'id' => '',
 		'price' => ''
 	);
+
+	$updatedCart = $_SESSION['cart'];
+	fb($updatedCart);
+
 	$testQuery = mysql_query("SELECT * FROM product WHERE id='$testId'");
+
 	while($results = mysql_fetch_array($testQuery)){
 		if(array_key_exists($results['id'], $_SESSION['cart'])){
 			$_SESSION['cart'][$results['id']]['qty'] += 1;
@@ -18,6 +28,7 @@
 			$item['name'] = $results['productName'];
 			$item['price'] = $results['price'];
 			$item['img'] = $results['productImg'];
+			$item['id'] = $results['id'];
 		
 			$_SESSION['cart'][$results['id']] = $item;
 		}
