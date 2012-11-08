@@ -173,7 +173,9 @@ footer {
 	color:#630;
 }
 
-#search .row .threecol .product {
+#search .row .threecol  .product{
+	border:solid .5px #630;
+	border-radius:7px;
     height:450px;
     position:relative;
     overflow:hidden;

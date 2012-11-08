@@ -34,6 +34,15 @@
 
 	<div class="content">
 		<div class="container">
+        
+        <div class="row">
+            <div class="twelvecol last"> 
+                <div class="titlebar">
+                    <h2> Search Results </h2>
+                </div>
+            </div>
+        </div>
+        
         	<div class="row">
             <?php 
 
