@@ -6,12 +6,14 @@ $(window).load(function(){
 });
 
 function addToCart(itemId){
+	var i = 0;
 	itemId = itemId.replace('id_', '');
 	itemId = parseInt(itemId);
 	//console.log(itemId);
 	
 	/*$.post('addCart.php', {id: itemId}, function(data){
-		location.reload(true);
+		console.log(data);
+		//location.reload(true);
 	});*/
 	
 	$.ajax({
@@ -21,9 +23,13 @@ function addToCart(itemId){
 			id: itemId
 		},
 		cache: false,
-		success: function(){
-			console.log(data);
-			//$('.cartNum').val(data);
+		dataType: 'json',
+		success: function(data){
+			//console.log(data);
+			for(var item in data){
+				console.log(data[item].name);
+				$('.cartNum').text('Your cart has: '+(item-1)+' items in it.');
+			}
 		}
 	});
 }

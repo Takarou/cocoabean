@@ -1,18 +1,3 @@
-<?php
-	include 'database.php';
-	
-	if(isset($_SESSION['user'])){
-		$username = $_SESSION['user'];
-				
-		$select = mysql_query("SELECT level FROM users WHERE username='$username'");
-				
-		while($row = mysql_fetch_array($select)){
-			if($row['level'] !== 2){
-				//header('location: index.php');
-			}
-		}
-	}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +28,21 @@
 
     <div class="container">
         <form  method="post" action="#"  id="admin"> 
-
+			<?php 
+				if(isset($_SESSION['user'])){
+					$_SESSION['user'] = $username;
+					$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
+					$temp = mysql_fetch_array($userLevel);
+					print_r($temp['level']);
+					if(!$temp['level'] >= 2){
+						header('location: index.php');
+					}else{
+						header('location: crud.php');
+					}
+				}else{
+					header('location: index.php');
+				}
+			?>
         </form>
     </div>
 

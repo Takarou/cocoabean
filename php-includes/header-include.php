@@ -2,11 +2,28 @@
 	session_start();
 	require("database.php");
 	
-	if(!isset($_SESSION['cart'])){
-		$cart = array();
-		$_SESSION['cart'] = $cart;
+	if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])){
+		if(isset($_SESSION['user'])){
+			$username = $_SESSION['user'];
+			$cartQuery = mysql_query("SELECT cart FROM users WHERE username='$username'");
+			$newCount = mysql_num_rows($cartQuery);
+			if($newCount == 1){
+				$newCart = mysql_fetch_array($cartQuery);
+				$json = $newCart[0];
+				if(!empty($json)){
+					$userCart = json_decode($json, true);
+					$_SESSION['cart'] = $userCart;
+				}else{
+					$cart = array();
+					$_SESSION['cart'] = $cart;
+				}
+			}
+		}else{
+			$cart = array();
+			$_SESSION['cart'] = $cart;
+		}
 	}
-	// print_r($_SESSION['cart']);
+	print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">
@@ -62,16 +79,15 @@
 								if($count == 1)
 								{
 									$_SESSION['user'] = $username;
-									$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
-									
-									if ($userLevel == 2) 
-									{
-										header('location: admin.php');	
-									} 
-									else 
-									{		
 									header('location: index.php');
-									}
+									/*$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
+									$temp = mysql_fetch_array($userLevel);
+									
+									if ($temp[0] == 2){
+										header('location: admin.php');	
+									}else{		
+										header('location: index.php');
+									}*/
 								}
 								else
 								{
@@ -120,7 +136,7 @@
         <div id="cart-contents">
         	<div class="onecol"></div> 			
 	    	<div class="twocol">
-                <a href="cart.php"><?php echo '<span class="cartNum">Your cart has: '.count($_SESSION['cart']).' items in it.</span>'; ?></a><br/>			
+                <a href="cart.php" class="cartNum"><?php echo 'Your cart has: '.count($_SESSION['cart']).' items in it.'; ?></a><br/>			
 			</div>
             <div class="onecol">
                 <a href="checkout.php" id="cart-checkout">Checkout</a><br/>

@@ -113,10 +113,6 @@ header .cart a#login-signup
 
 /* NAVIGATION */
 
-#search {
-	background: #ddd;
-}
-
 nav li a
 {
 	font-family: "Calibri","Helvetica", sans-serif;
@@ -147,6 +143,60 @@ footer {
 #search .fourcol input{
 	width:25em;
 	margin:5px;
+}
+
+/* SEARCH */
+
+#search {
+	background: #ddd;
+}
+
+#search .titlebar {
+	margin-bottom:.5em;
+	padding:.3em;
+}
+
+#search .row .threecol p {
+	padding:.6em;
+}
+
+#search .row .threecol h3 {
+	padding:.3em;
+}
+
+#search h3 {
+	font-weight:bold;
+}
+
+#search a {
+	text-decoration:none;
+	color:#630;
+}
+
+#search .row .threecol .product {
+    height:450px;
+    position:relative;
+    overflow:hidden;
+	text-align:center;
+}
+
+#search .row .threecol .product .crop {
+    height:250px;
+	min-height:250px;
+	min-width:250px;
+    position:relative;
+    overflow:hidden;
+	text-align:center;
+}
+
+#search .row .threecol .product .crop img 
+{	
+	display:block;    
+	border-radius:5px;
+
+	/* trying to resize images so they occupy the same size div, without being stretched weirdly.  */	
+	width: 100%;
+	height: 230px;		
 }
 
 /* HOME */
@@ -308,13 +358,8 @@ body#home
 {
 	background-color:#ebddce;
 	border:2px solid #804000;
-	border-radius:3px;
-	/*height:15em;*/
+	border-radius:3px;	
 }
-
-#products .row .sixcol li {
-}
-
 
 /* CART PRODUCTS */
 
@@ -322,14 +367,19 @@ body#home
 	background: #ddd;
 }
 
-#cartProducts .stuff .row {
-	background-color:#ebddce;
-	border:2px solid #804000;
-	border-radius:6px;
+#cartProducts .cartContents .row 
+{	
+	border-bottom: 1px solid #804000;
 }
 
-#cartProducts .stuff .row .product {
-	padding:.5em;
+#cartProducts .cartContents .row .product {
+	/*padding:.5em;*/
+}
+
+#cartProducts .cartContents .product img.cart-product-image
+{
+	width: 6em;
+	height: 6em;
 }
 
 #cartProducts .row .total {
@@ -348,6 +398,8 @@ body#home
 #cartProducts .row .continue a{
 	color:#000;
 	padding:2em;
+	font-size: 0.85em;
+	white-space: nowrap;	
 	text-decoration:none;
 }
 
