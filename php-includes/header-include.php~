@@ -19,6 +19,7 @@
 		$cart = array();
 		$_SESSION['cart'] = $cart;
 	}
+
 	print_r($_SESSION['cart']);
 ?>
 <header>
@@ -75,16 +76,14 @@
 								if($count == 1)
 								{
 									$_SESSION['user'] = $username;
-									$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
+									/*$userLevel = mysql_query("SELECT level FROM users WHERE username='$username'");
+									$temp = mysql_fetch_array($userLevel);
 									
-									if ($userLevel == 2) 
-									{
+									if ($temp[0] == 2){
 										header('location: admin.php');	
-									} 
-									else 
-									{		
-									header('location: index.php');
-									}
+									}else{		
+										header('location: index.php');
+									}*/
 								}
 								else
 								{
@@ -133,7 +132,7 @@
         <div id="cart-contents">
         	<div class="onecol"></div> 			
 	    	<div class="twocol">
-                <a href="cart.php"><?php echo '<span class="cartNum">Your cart has: '.count($_SESSION['cart']).' items in it.</span>'; ?></a><br/>			
+                <a href="cart.php" class="cartNum"><?php echo 'Your cart has: '.count($_SESSION['cart']).' items in it.'; ?></a><br/>			
 			</div>
             <div class="onecol">
                 <a href="checkout.php" id="cart-checkout">Checkout</a><br/>

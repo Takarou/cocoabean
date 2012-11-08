@@ -30,8 +30,7 @@
 <body id="products">
 	
 	<?php include 'php-includes/header-include.php'; ?>
- 
-	
+ 	
     <div class="container">
 
     	<div class="row">

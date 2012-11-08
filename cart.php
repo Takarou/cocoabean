@@ -26,6 +26,14 @@
 	<?php include 'php-includes/header-include.php'; ?>
 	
     <div class="container">
+
+        <?php 
+            $cartContents = $_SESSION['cart'];
+            // print_r($cartContents);
+
+            $sizeOfCart = count($cartContents);
+         ?>
+
 		<div class="row">
             <div class="twelvecol last"> 
                 <div class="titlebar">
@@ -34,86 +42,57 @@
             </div>
         </div>
         
-        <div class="stuff">
-        	<div class="row">
-                <div class="twocol">
-                    <div class="product">
-                        <p>HOLDER</p>
-                    </div>
-                </div>
-                <div class="onecol">
-                    <div class="product">
-                        <p>1.</p>
-                    </div>
-                </div>
-                <div class="twocol">
-                    <div class="product">
-                        <p>THUMBNAIL</p>
-                    </div>
-                </div>  
-                <div class="twocol">
-                    <div class="product">
-                        <p>PRODUCT NAME</p>
-                    </div>
-                </div>  
-                <div class="twocol">
-                    <div class="product">
-                        <p>SHORT DESC</p>
-                    </div>
-                </div>
-                <div class="twocol">
-                    <div class="product">
-                        <p>PRICE</p>
-                    </div>
-                </div>  
-                <div class="onecol last">
-                    <div class="product">
-                        <p>HOLDER</p>
-                    </div>
-                </div>       
-            </div>
+        <div class="cartContents">
+
+            <?php 
+            $count = 1;
+
+                foreach ($cartContents as $key) 
+                {                    
+                
+                echo"
+                    <div class='row'>
+                        <div class='twocol'></div>
+
+                        <div class='onecol'>
+                            <div class='product'>
+                                <p>".$key['name']."</p>
+                            </div>
+                        </div>
+
+                        <div class='twocol'>
+                            <div class='product'>
+                                <img class='cart-product-image' src='".$key['img']."' alt=''></img>                                
+                            </div>
+                        </div>  
+
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>Qty: ".$key['qty']."</p>
+                            </div>
+                        </div>                          
+
+                        <div class='twocol'>
+                            <div class='product'>
+                                <p>Price: $".$key['price']."</p>
+                            </div>
+                        </div>  
+
+                        <div class='threecol last'></div>     
+                            
+                    </div><!--/.row-->";
+                    $count++;
+                }
+
+
+             ?>    
+        
+        </div><!--/.cartContents-->	   
+        
+        <div class="row">
+            <div class="coltwelve"></div>
         </div>
-        
-        <div class="stuff">
-            <div class="row">
-                <div class="twocol">
-                    <div class="product">
-                        <p>HOLDER</p>
-                    </div>
-                </div>
-                <div class="onecol">
-                    <div class="product">
-                        <p>2.</p>
-                    </div>
-                </div>
-                <div class="twocol">
-                    <div class="product">
-                        <p>THUMBNAIL</p>
-                    </div>
-                </div>  
-                <div class="twocol">
-                    <div class="product">
-                        <p>PRODUCT NAME</p>
-                    </div>
-                </div>  
-                <div class="twocol">
-                    <div class="product">
-                        <p>SHORT DESC</p>
-                    </div>
-                </div>
-                <div class="twocol">
-                    <div class="product">
-                        <p>PRICE</p>
-                    </div>
-                </div>  
-                <div class="onecol last">
-                    <div class="product">
-                        <p>HOLDER</p>
-                    </div>
-                </div>       
-            </div>
-		</div>    	   
-        
+
         <div class="row">
         	<div class="total">
             	<div class="sevencol">
@@ -128,11 +107,10 @@
         </div>
    
 		<div class="row">
-        	<div class="ninecol">
-            </div>
+        	<div class="ninecol"></div>            
             <div class="threecol last">
             	<div class="continue">
-            		<a href="checkout.php" />Continue to Checkout</a>
+            		<a href="checkout.php">Continue to Checkout</a>
                 </div>
             </div>
         </div>                
