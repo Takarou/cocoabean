@@ -4,10 +4,10 @@ $(window).load(function(){
 		addToCart(itemId);
 	});
 
-	$('.cart-remove-button').bind('click', function(){
-		var itemToRemoveId = $(this).attr('id');		
-		removeFromCart(itemToRemoveId);
-	});
+	// $('.cart-remove-button').bind('click', function(){
+	// 	var itemToRemoveId = $(this).attr('id');		
+	// 	removeFromCart(itemToRemoveId);
+	// });
 
 	// $('.cart-remove-button').bind('click'), function(){
 	// 	var itemToRemoveId = $(this).attr('id');
