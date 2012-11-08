@@ -48,15 +48,16 @@
             $count = 1;
 
                 foreach ($cartContents as $key) 
-                {                    
-                
+                {                                    
                 echo"
                     <div class='row'>
-                        <div class='twocol'></div>
+                        <div class='onecol'></div>
 
-                        <div class='onecol'>
+                        <div class='twocol'>
                             <div class='product'>
                                 <p>".$key['name']."</p>
+                                <br/>
+                                <p>Qty: ".$key['qty']."</p>
                             </div>
                         </div>
 
@@ -64,13 +65,7 @@
                             <div class='product'>
                                 <img class='cart-product-image' src='".$key['img']."' alt=''></img>                                
                             </div>
-                        </div>  
-
-                        <div class='twocol'>
-                            <div class='product'>
-                                <p>Qty: ".$key['qty']."</p>
-                            </div>
-                        </div>                          
+                        </div>                                            
 
                         <div class='twocol'>
                             <div class='product'>
@@ -78,7 +73,13 @@
                             </div>
                         </div>  
 
-                        <div class='threecol last'></div>     
+                        <div class='twocol'>
+                            <div class='product'>                                                      
+                                <a href='#' class='cart-remove-button' id='id_".$key['id']."'>Remove From Cart</a>
+                            </div>
+                        </div>  
+
+                        <div class='fivecol last'></div>     
                             
                     </div><!--/.row-->";
                     $count++;
