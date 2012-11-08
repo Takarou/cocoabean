@@ -23,7 +23,7 @@
 			$_SESSION['cart'] = $cart;
 		}
 	}
-	print_r($_SESSION['cart']);
+	// print_r($_SESSION['cart']);
 ?>
 <header>
 	<div class="row">
